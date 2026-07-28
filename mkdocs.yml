@@ -1,0 +1,100 @@
+# Public GitHub Pages site — https://social-team-organization.github.io/social-hr-docs/
+site_name: Social HR Product Documentation
+site_description: Product and system documentation for Social HR
+site_url: https://social-team-organization.github.io/social-hr-docs/
+
+# Edits happen in the private source repo; this repo is deploy-only.
+repo_url: https://github.com/Social-Team-Organization/social-hr
+repo_name: Social-Team-Organization/social-hr
+edit_uri: edit/main/docs/product/
+
+docs_dir: docs
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  logo: material/account-group
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Social-Team-Organization/social-hr-docs
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - product/assets/stylesheets/extra.css
+
+nav:
+  - Home: product/README.md
+  - Overview: product/OVERVIEW.md
+  - Platform: product/PLATFORM.md
+  - Plans: product/PLANS.md
+  - Modules: product/MODULES.md
+  - Features: product/FEATURES.md
+  - How It Works: product/HOW_IT_WORKS.md
+  - Use Cases: product/USE_CASES.md
+  - Policies: product/POLICIES.md
+  - Design Decisions: product/DESIGN_DECISIONS.md
+  - Roles & Permissions: product/ROLES_AND_PERMISSIONS.md
+  - Glossary: product/GLOSSARY.md
+  - Terminology:
+      - English Glossary: SOCIAL_HR_TERMS_GLOSSARY.md
+      - Arabic Terms: SOCIAL_HR_TERMS_AR.md

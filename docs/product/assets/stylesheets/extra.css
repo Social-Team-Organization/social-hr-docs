@@ -1,0 +1,15 @@
+/* Social HR brand tokens — see DESIGN.md */
+:root {
+  --md-primary-fg-color: #0d9488;
+  --md-primary-fg-color--light: #14b8a6;
+  --md-primary-fg-color--dark: #0b3d3a;
+  --md-accent-fg-color: #e85d04;
+  --md-accent-fg-color--transparent: #e85d0426;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #14b8a6;
+  --md-primary-fg-color--light: #2dd4bf;
+  --md-primary-fg-color--dark: #0d9488;
+  --md-accent-fg-color: #fb923c;
+}
