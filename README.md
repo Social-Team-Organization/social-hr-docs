@@ -11,7 +11,7 @@ GitHub Pages on **private** repositories requires GitHub Enterprise or Pro. This
 ## One-time setup
 
 1. Create a **public** repository on GitHub named `social-hr-docs` under `Social-Team-Organization`.
-2. From the private `social-hr` repo, sync and push:
+2. From the private `social-hr` repo, **sync** (copies product docs **and** terminology files), then push:
 
    ```bash
    ./scripts/sync-product-docs.sh
@@ -23,6 +23,12 @@ GitHub Pages on **private** repositories requires GitHub Enterprise or Pro. This
    git remote add origin git@github.com:Social-Team-Organization/social-hr-docs.git
    git push -u origin main
    ```
+
+   **Required in the public repo** (created by the sync script):
+
+   - `docs/product/` (all pages and images)
+   - `docs/SOCIAL_HR_TERMS_AR.md`
+   - `docs/SOCIAL_HR_TERMS_GLOSSARY.md`
 
 3. On GitHub → **Settings** → **Pages** → set **Source** to **GitHub Actions**.
 4. Re-run the **Deploy to GitHub Pages** workflow if needed.
