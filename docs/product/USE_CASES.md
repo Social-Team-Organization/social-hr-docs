@@ -87,7 +87,7 @@ Acme Corp has mostly office workers and wants to ensure employees clock in from 
 
 ![Office geofence vs remote work type at check-in](./assets/geofencing.png)
 
-**Outcome:** Office employees must be within the geofence circle to [check in](../SOCIAL_HR_TERMS_AR.md). Remote employees can check in from anywhere. Every location check is logged.
+**Outcome:** Office employees must be within the geofence circle to check in. Remote employees can check in from anywhere. Every location check is logged.
 
 Feature: [Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies). Flow: [Work type resolution](./HOW_IT_WORKS.md#work-type-resolution).
 

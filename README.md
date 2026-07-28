@@ -2,7 +2,7 @@
 
 This repository hosts the **public** [Social HR product documentation](https://social-team-organization.github.io/social-hr-docs/) on GitHub Pages.
 
-The **source of truth** for documentation content is the private [`Social-Team-Organization/social-hr`](https://github.com/Social-Team-Organization/social-hr) repository (`docs/product/`).
+Content is synced from `docs/product/` in the private Social HR application repository.
 
 ## Why a separate public repo?
 
@@ -10,8 +10,8 @@ GitHub Pages on **private** repositories requires GitHub Enterprise or Pro. This
 
 ## One-time setup
 
-1. Create a **public** repository on GitHub named `social-hr-docs` under `Social-Team-Organization`.
-2. From the private `social-hr` repo, **sync** (copies product docs **and** terminology files), then push:
+1. Create a **public** repository on GitHub named `social-hr-docs`.
+2. From the private `social-hr` repo, sync and push:
 
    ```bash
    ./scripts/sync-product-docs.sh
@@ -24,23 +24,15 @@ GitHub Pages on **private** repositories requires GitHub Enterprise or Pro. This
    git push -u origin main
    ```
 
-   **Required in the public repo** (created by the sync script):
-
-   - `docs/product/` (all pages and images)
-   - `docs/SOCIAL_HR_TERMS_AR.md`
-   - `docs/SOCIAL_HR_TERMS_GLOSSARY.md`
-
 3. On GitHub → **Settings** → **Pages** → set **Source** to **GitHub Actions**.
-4. Re-run the **Deploy to GitHub Pages** workflow if needed.
 
 **Live URL:** https://social-team-organization.github.io/social-hr-docs/
 
 ## Updating docs
 
-After editing docs in the private `social-hr` repo:
+After editing files in `docs/product/` in the private repo:
 
 ```bash
-# From social-hr repository root
 ./scripts/sync-product-docs.sh
 cd social-hr-docs
 git add -A

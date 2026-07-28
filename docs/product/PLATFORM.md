@@ -84,7 +84,7 @@ The workspace includes:
 
 - **Sidebar navigation** — HR [modules](./MODULES.md) enabled by the customer's [plan](./PLANS.md) (and any [overrides](./PLANS.md#per-customer-module-overrides))
 - **Dashboard** — role-aware tiles: headcount, announcements, approval queues, analytics
-- **Navbar** — [check-in/check-out](../SOCIAL_HR_TERMS_AR.md), quick actions, language switcher, notifications
+- **Navbar** — check-in/check-out, quick actions, language switcher, notifications
 - **Settings** — organization configuration (departments, [work types](./GLOSSARY.md#workforce-visibility-terms), policies, mail, permissions)
 - **Employee profiles** — comprehensive tabs for personal info, attendance, leave, payroll, documents, and more
 

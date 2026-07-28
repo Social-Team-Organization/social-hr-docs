@@ -121,12 +121,12 @@ For [plan availability](./PLANS.md#full-module-catalog), see Plans. For how modu
 | | |
 |---|---|
 | **Who uses it** | All employees clock in; managers validate; HR configures; payroll relies on records |
-| **Typical workflow** | [Check-in](../SOCIAL_HR_TERMS_AR.md) → policies applied → [check-out](../SOCIAL_HR_TERMS_AR.md) → manager validates → payroll |
+| **Typical workflow** | Check-in → policies applied → check-out → manager validates → payroll |
 | **Connects to** | [Geofencing](./MODULES.md#geofencing), [Face Check-In](./MODULES.md#face-check-in), [Activity Tracking](./MODULES.md#activity-tracking), [Payroll](./MODULES.md#payroll) |
 
 **Key capabilities:**
 
-- [Check-in and check-out](../SOCIAL_HR_TERMS_AR.md) from the navbar or attendance screens
+- Check-in and check-out from the navbar or attendance screens
 - Attendance records, requests (corrections), and manager validation
 - [Work records](./GLOSSARY.md#attendance-and-pay-terms) — daily matrix used by payroll
 - [Hour account](./GLOSSARY.md#attendance-and-pay-terms) for overtime tracking
@@ -369,7 +369,7 @@ Deep dive: [Features — Geofencing](./FEATURES.md#geofencing-and-work-type-loca
 **Key capabilities:**
 
 - Employee [face registration](./GLOSSARY.md#workforce-visibility-terms) (minimum three successful captures)
-- Verification at [check-in](../SOCIAL_HR_TERMS_AR.md) via browser webcam
+- Verification at check-in via browser webcam
 - Re-enrollment requests when verification fails
 - Privacy-focused: stores mathematical face templates, not enrollment photos
 

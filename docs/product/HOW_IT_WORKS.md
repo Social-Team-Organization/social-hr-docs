@@ -47,7 +47,7 @@ Almost everything in Social HR connects to the **employee record**. When someone
 | **Onboard** | [Onboarding](./MODULES.md#onboarding) | Task boards for HR, IT, and new hire |
 | **Employ** | [Employees](./MODULES.md#employees) | Profile active; org structure assigned |
 | **Schedule** | Employees + Configuration | Shift, work type, rotating assignments |
-| **Work** | Attendance + extensions | Daily [check-in/out](../SOCIAL_HR_TERMS_AR.md) with optional location, face, activity |
+| **Work** | Attendance + extensions | Daily check-in/out with optional location, face, activity |
 | **Time off** | [Leave](./MODULES.md#leave) | Requests, approvals, balance deductions |
 | **Pay** | [Payroll](./MODULES.md#payroll) | Contract + validated attendance → payslip |
 | **Develop** | [Performance (PMS)](./MODULES.md#performance-pms) | Goals, feedback cycles, bonus points |

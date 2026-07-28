@@ -149,7 +149,7 @@ Scenarios: [Use Cases — Manager](./USE_CASES.md#manager-scenarios).
 
 | Area | Actions |
 |------|---------|
-| **[Attendance](./GLOSSARY.md#attendance-and-pay-terms)** | [Check in and out](../SOCIAL_HR_TERMS_AR.md) daily |
+| **[Attendance](./GLOSSARY.md#attendance-and-pay-terms)** | Check in and out daily |
 | **[Leave](./GLOSSARY.md#leave-terms)** | Request time off, view balances |
 | **Profile** | View and update own personal information |
 | **Requests** | Submit attendance corrections, shift changes, work type requests, reimbursements, asset requests |

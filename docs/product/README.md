@@ -18,7 +18,7 @@ This is **not** developer documentation. It explains capabilities, policies, and
 | **HR director or admin** | [Modules](./MODULES.md) → [Policies](./POLICIES.md) → [Use Cases](./USE_CASES.md) | Day-to-day capabilities, rules, and real scenarios |
 | **Implementation consultant** | [How It Works](./HOW_IT_WORKS.md) → [Roles & Permissions](./ROLES_AND_PERMISSIONS.md) → [Platform](./PLATFORM.md) | Flows, roles, and the platform vs workspace split |
 | **Sales or onboarding** | [Platform](./PLATFORM.md) → [Plans](./PLANS.md) → [Use Cases](./USE_CASES.md) | Demo narrative, packaging, and customer stories |
-| **Localization or training** | [Glossary](./GLOSSARY.md) → [Arabic terminology](../SOCIAL_HR_TERMS_AR.md) | Terms, Arabic UI labels, and consistency rules |
+| **Localization or training** | [Glossary](./GLOSSARY.md) | Terms and consistency rules |
 
 ---
 
@@ -30,7 +30,7 @@ This is **not** developer documentation. It explains capabilities, policies, and
 | HR directors and admins | [Modules](./MODULES.md), [Policies](./POLICIES.md), [Use Cases](./USE_CASES.md) |
 | Implementation consultants | [How It Works](./HOW_IT_WORKS.md), [Roles & Permissions](./ROLES_AND_PERMISSIONS.md) |
 | Sales and onboarding | [Platform](./PLATFORM.md), [Plans](./PLANS.md), [Use Cases](./USE_CASES.md) |
-| Localization and training | [Glossary](./GLOSSARY.md), [Arabic terminology](../SOCIAL_HR_TERMS_AR.md) |
+| Localization and training | [Glossary](./GLOSSARY.md) |
 
 ---
 
@@ -48,24 +48,13 @@ This is **not** developer documentation. It explains capabilities, policies, and
 | [POLICIES.md](./POLICIES.md) | Rules organizations experience in the product | [Data isolation](./assets/data-isolation-policy.png) |
 | [DESIGN_DECISIONS.md](./DESIGN_DECISIONS.md) | Why Social HR was built this way — rationale and user impact | — |
 | [ROLES_AND_PERMISSIONS.md](./ROLES_AND_PERMISSIONS.md) | [Platform operator](./GLOSSARY.md#platform-terms), admin, HR, manager, employee | [Role hierarchy](./assets/roles-hierarchy.png) |
-| [GLOSSARY.md](./GLOSSARY.md) | Business terms with links to English and Arabic references | — |
+| [GLOSSARY.md](./GLOSSARY.md) | Business terms used across product documentation | — |
 
 ---
 
-## Terminology references
-
-For exhaustive UI-aligned definitions used in training and localization:
-
-- [English product glossary](../SOCIAL_HR_TERMS_GLOSSARY.md) — complete label-level reference
-- [Arabic terminology map](../SOCIAL_HR_TERMS_AR.md) — Saudi/GCC HR wording aligned to the English glossary (e.g. [check-in](../SOCIAL_HR_TERMS_AR.md) → تسجيل الحضور)
+## Language
 
 Social HR defaults to **Arabic** as the primary interface language. English and other locales are available via the language switcher. See [Features — Internationalization](./FEATURES.md#internationalization-arabic-first).
-
----
-
-## Technical documentation
-
-For architecture, deployment, APIs, and engineering implementation, see the [developer documentation](https://github.com/Social-Team-Organization/social-hr/blob/main/docs/README.md) in the repository.
 
 ---
 

@@ -155,14 +155,14 @@ Policy: [Face check-in policies](./POLICIES.md#face-check-in).
 
 **Context:** Primary market users expect Arabic HR terminology and a first-run experience in their language.
 
-**Decision:** Arabic is the default interface language, with a comprehensive [terminology map](../SOCIAL_HR_TERMS_AR.md) for consistency and an [English glossary](../SOCIAL_HR_TERMS_GLOSSARY.md) for localization QA.
+**Decision:** Arabic is the default interface language, with standardized HR terminology in the product [Glossary](./GLOSSARY.md).
 
 **Why it matters:**
 
 - First login feels native to Saudi/GCC HR teams.
-- Terminology is standardized (e.g., check-in → [تسجيل الحضور](../SOCIAL_HR_TERMS_AR.md)) across the product.
+- Terminology is standardized (e.g., check-in → تسجيل الحضور) across the product.
 - English and other locales remain available via language switcher.
-- Training materials can reference the Arabic terminology map for consistency.
+- Training materials can reference the glossary for consistency.
 - **Trade-off:** demo content and documentation should account for right-to-left layout where applicable.
 
 Feature: [Internationalization](./FEATURES.md#internationalization-arabic-first).

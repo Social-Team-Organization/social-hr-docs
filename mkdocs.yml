@@ -3,10 +3,8 @@ site_name: Social HR Product Documentation
 site_description: Product and system documentation for Social HR
 site_url: https://social-team-organization.github.io/social-hr-docs/
 
-# Edits happen in the private source repo; this repo is deploy-only.
-repo_url: https://github.com/Social-Team-Organization/social-hr
-repo_name: Social-Team-Organization/social-hr
-edit_uri: edit/main/docs/product/
+repo_url: https://github.com/Social-Team-Organization/social-hr-docs
+repo_name: Social-Team-Organization/social-hr-docs
 
 docs_dir: docs
 use_directory_urls: true
@@ -46,18 +44,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Social-Team-Organization/social-hr-docs
-  analytics:
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: Thanks for your feedback!
 
 plugins:
   - search
@@ -95,6 +81,3 @@ nav:
   - Design Decisions: product/DESIGN_DECISIONS.md
   - Roles & Permissions: product/ROLES_AND_PERMISSIONS.md
   - Glossary: product/GLOSSARY.md
-  - Terminology:
-      - English Glossary: SOCIAL_HR_TERMS_GLOSSARY.md
-      - Arabic Terms: SOCIAL_HR_TERMS_AR.md

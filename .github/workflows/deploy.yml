@@ -31,20 +31,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-docs.txt
 
-      - name: Verify required docs are present
-        run: |
-          test -f docs/SOCIAL_HR_TERMS_AR.md || {
-            echo "::error::Missing docs/SOCIAL_HR_TERMS_AR.md — run ./scripts/sync-product-docs.sh from social-hr and push again"
-            exit 1
-          }
-          test -f docs/SOCIAL_HR_TERMS_GLOSSARY.md || {
-            echo "::error::Missing docs/SOCIAL_HR_TERMS_GLOSSARY.md — run ./scripts/sync-product-docs.sh from social-hr and push again"
-            exit 1
-          }
-          test -f docs/product/README.md || {
-            echo "::error::Missing docs/product/ — run ./scripts/sync-product-docs.sh from social-hr and push again"
-            exit 1
-          }
+      - name: Verify product docs are present
+        run: test -f docs/product/README.md
 
       - name: Build site
         run: mkdocs build --strict

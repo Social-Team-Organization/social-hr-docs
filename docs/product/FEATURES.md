@@ -4,7 +4,7 @@ Detailed descriptions of Social HR's major capabilities — especially those tha
 
 Each feature section covers: **what it is**, **who uses it**, **typical workflow**, **benefits**, and **limitations**.
 
-For UI label definitions, see the [English product glossary](../SOCIAL_HR_TERMS_GLOSSARY.md) and [Arabic terminology map](../SOCIAL_HR_TERMS_AR.md).
+For UI label definitions, see the [Glossary](./GLOSSARY.md).
 
 > **At a glance — Social HR differentiators**
 >
@@ -68,7 +68,7 @@ The system for recording when employees start and stop work. [Attendance](./GLOS
 
 | Role | Actions |
 |------|---------|
-| **Employees** | [Check in and out](../SOCIAL_HR_TERMS_AR.md) daily via navbar or attendance screens |
+| **Employees** | Check in and out daily via navbar or attendance screens |
 | **Managers** | Validate attendance before payroll runs |
 | **HR administrators** | Configure rules, grace times, IP restrictions |
 | **Payroll specialists** | Rely on validated records for payslip generation |
@@ -450,12 +450,12 @@ Social HR defaults to **Arabic** as the primary interface language, with English
 ### Why it matters
 
 - First-run experience matches Saudi/GCC HR users
-- Consistent terminology via the [Arabic terminology map](../SOCIAL_HR_TERMS_AR.md)
-- [Check-in](../SOCIAL_HR_TERMS_AR.md)/[check-out](../SOCIAL_HR_TERMS_AR.md), attendance, leave, and other core terms use established MENA HR wording
+- Consistent Arabic terminology across the product (e.g. check-in → تسجيل الحضور, check-out → تسجيل الانصراف)
+- Core HR terms use established MENA HR wording
 
 ### For training and localization
 
-Use the [English product glossary](../SOCIAL_HR_TERMS_GLOSSARY.md) for label audits and the [Arabic map](../SOCIAL_HR_TERMS_AR.md) for translation consistency.
+Use the [Glossary](./GLOSSARY.md) for standard product terms and Arabic equivalents where listed.
 
 Rationale: [Design Decisions — Arabic as default](./DESIGN_DECISIONS.md#arabic-as-the-default-language).
 

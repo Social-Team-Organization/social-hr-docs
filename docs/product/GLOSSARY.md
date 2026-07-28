@@ -1,6 +1,6 @@
 # Glossary
 
-Business terms used in Social HR product documentation. For exhaustive UI-aligned definitions and Arabic translations, see the dedicated terminology references linked below.
+Business terms used in Social HR product documentation.
 
 ![Social HR module ecosystem — key terms map to modules around the employee record](./assets/modules-ecosystem.png)
 
@@ -22,8 +22,6 @@ Product docs index: [README](./README.md). Module details: [Modules](./MODULES.m
 | **[Module override](./GLOSSARY.md)** | Per-customer force-on or force-off of a specific module, regardless of plan | [Plans — Overrides](./PLANS.md#per-customer-module-overrides) |
 | **[Provision](./GLOSSARY.md)** | Create a new customer workspace with subdomain, plan, and initial admin | [Use Cases — Provision trial](./USE_CASES.md#provision-a-new-customer-trial) |
 | **[Platform operator](./GLOSSARY.md)** | Social HR staff who manage the control plane | [Roles — Platform operator](./ROLES_AND_PERMISSIONS.md#platform-operator) |
-
-Arabic equivalents: [SOCIAL_HR_TERMS_AR.md](../SOCIAL_HR_TERMS_AR.md).
 
 ---
 
@@ -67,8 +65,8 @@ Rationale: [Design Decisions — No company switcher](./DESIGN_DECISIONS.md#no-c
 
 | Term | Definition | Arabic |
 |------|------------|--------|
-| **[Geofence](./GLOSSARY.md)** | Virtual circle around the office — must be activated by HR admin to enforce | [SOCIAL_HR_TERMS_AR.md](../SOCIAL_HR_TERMS_AR.md) |
-| **[Work type](./GLOSSARY.md)** | Office, Remote, Hybrid, or Field — determines location policy | [SOCIAL_HR_TERMS_AR.md](../SOCIAL_HR_TERMS_AR.md) |
+| **[Geofence](./GLOSSARY.md)** | Virtual circle around the office — must be activated by HR admin to enforce | السياج الجغرافي |
+| **[Work type](./GLOSSARY.md)** | Office, Remote, Hybrid, or Field — determines location policy | نوع العمل |
 | **[Location policy](./GLOSSARY.md)** | Rule for a work type: require inside geofence, allow anywhere, or block clock-in | [Policies — Geofencing](./POLICIES.md#geofencing-and-location) |
 | **[Bypass geofence](./GLOSSARY.md)** | Per-employee flag to skip location checks | [Policies — Geofencing](./POLICIES.md#geofencing-and-location) |
 | **[Work type request](./GLOSSARY.md)** | Temporary approved change to work type for specific dates | [Use Cases — Approve remote work](./USE_CASES.md#approve-remote-work-for-one-day) |
@@ -88,8 +86,8 @@ Rationale: [Design Decisions — No company switcher](./DESIGN_DECISIONS.md#no-c
 
 | Term | Definition | Arabic |
 |------|------------|--------|
-| **[Check-in / check-out](./GLOSSARY.md)** | Recording start and end of work | [تسجيل الحضور / تسجيل الانصراف](../SOCIAL_HR_TERMS_AR.md) |
-| **[Attendance record](./GLOSSARY.md)** | Single check-in/check-out entry for a work period | [SOCIAL_HR_TERMS_AR.md](../SOCIAL_HR_TERMS_AR.md) |
+| **[Check-in / check-out](./GLOSSARY.md)** | Recording start and end of work | تسجيل الحضور / تسجيل الانصراف |
+| **[Attendance record](./GLOSSARY.md)** | Single check-in/check-out entry for a work period | سجل الحضور |
 | **[Work records](./GLOSSARY.md)** | Daily matrix of worked hours feeding payroll | [How It Works — Pay authority](./HOW_IT_WORKS.md#attendance-sources-and-pay-authority) |
 | **[Hour account](./GLOSSARY.md)** | Overtime bank — separate from project timesheets | [Policies — Attendance](./POLICIES.md#attendance) |
 | **[Attendance validation](./GLOSSARY.md)** | Manager review and approval of attendance records | [Use Cases — Validate attendance](./USE_CASES.md#validate-attendance-before-payroll) |
@@ -140,21 +138,6 @@ Rationale: [Design Decisions — Project time separate](./DESIGN_DECISIONS.md#pr
 | **Cancelled** | Login blocked — data retained until deletion |
 
 Policy: [Account access](./POLICIES.md#account-access-and-entitlements).
-
----
-
-## Full terminology references
-
-For complete UI label definitions used in training, product copy audits, and localization:
-
-| Document | Language | Scope |
-|----------|----------|-------|
-| [English product glossary](../SOCIAL_HR_TERMS_GLOSSARY.md) | English | Complete UI glossary: navbar, dashboard, settings, modules |
-| [Arabic terminology map](../SOCIAL_HR_TERMS_AR.md) | Arabic | Saudi/GCC HR wording aligned to the English glossary |
-
-Social HR defaults to **Arabic** as the primary interface language. Use the Arabic map for training materials and localization consistency (e.g., Check-In → تسجيل الحضور).
-
-Feature: [Internationalization](./FEATURES.md#internationalization-arabic-first).
 
 ---
 

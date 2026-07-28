@@ -85,7 +85,7 @@ Beyond standard HR modules, Social HR adds capabilities aimed at modern workforc
 | **[Face check-in](./FEATURES.md#face-check-in)** | Optional webcam identity verification before attendance | ![Face check-in](./assets/face-checkin.png) |
 | **[Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring)** | Desktop app tracks presence, idle time, optional screenshots | ![Activity monitoring](./assets/activity-monitoring.png) |
 | **Work-type location policies** | Flexible rules — not just "remote on/off" — with temporary overrides via [work type requests](./GLOSSARY.md#workforce-visibility-terms) | [How It Works — Work type resolution](./HOW_IT_WORKS.md#work-type-resolution) |
-| **Arabic-first interface** | Default Arabic UI with consistent [Saudi/GCC HR terminology](../SOCIAL_HR_TERMS_AR.md) | [Features — Internationalization](./FEATURES.md#internationalization-arabic-first) |
+| **Arabic-first interface** | Default Arabic UI with consistent Saudi/GCC HR terminology | [Features — Internationalization](./FEATURES.md#internationalization-arabic-first) |
 | **[Plan-based entitlements](./PLANS.md)** | Sell tiers; turn modules on or off per customer without re-provisioning | ![Plans comparison](./assets/plans-comparison.png) |
 
 > **Important:** [Attendance](./GLOSSARY.md#attendance-and-pay-terms) remains the **authoritative source for pay hours**. [Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring) provides oversight but does not automatically change payroll. See [Design Decisions — Attendance drives pay](./DESIGN_DECISIONS.md#attendance-drives-pay-activity-provides-oversight).
@@ -112,7 +112,7 @@ Social HR presents as **clear, human, and operationally confident**:
 
 - The marketing site explains the product quickly — [tenant isolation](./POLICIES.md#data-isolation-and-privacy) is stated plainly.
 - The [control plane](./PLATFORM.md) dashboard is a practical operations tool: dense enough to manage accounts, quiet enough to trust.
-- The tenant HR app follows standard HR workflows with **Arabic as the default language** ([Arabic terminology map](../SOCIAL_HR_TERMS_AR.md)).
+- The tenant HR app follows standard HR workflows with **Arabic as the default language**.
 
 Visual design uses warm paper tones with deep teal text and an ember accent for primary actions.
 
