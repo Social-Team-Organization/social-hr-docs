@@ -13,3 +13,22 @@
   --md-primary-fg-color--dark: #0d9488;
   --md-accent-fg-color: #fb923c;
 }
+
+/* Home page hero */
+.shr-home-hero {
+  text-align: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.shr-home-logo {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.shr-home-hero .md-button {
+  margin: 0.25rem;
+}
+
+.md-header__button.md-logo img {
+  height: 2rem;
+}

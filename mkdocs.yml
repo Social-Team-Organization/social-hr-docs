@@ -12,7 +12,8 @@ use_directory_urls: true
 theme:
   name: material
   language: en
-  logo: material/account-group
+  logo: assets/socialhr-logo.png
+  favicon: assets/socialhr-logo.png
   features:
     - navigation.instant
     - navigation.tracking
@@ -69,7 +70,7 @@ extra_css:
   - product/assets/stylesheets/extra.css
 
 nav:
-  - Home: product/README.md
+  - Home: index.md
   - Overview: product/OVERVIEW.md
   - Platform: product/PLATFORM.md
   - Plans: product/PLANS.md

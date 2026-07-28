@@ -32,7 +32,10 @@ jobs:
         run: pip install -r requirements-docs.txt
 
       - name: Verify product docs are present
-        run: test -f docs/product/README.md
+        run: |
+          test -f docs/index.md
+          test -f docs/assets/socialhr-logo.png
+          test -f docs/product/README.md
 
       - name: Build site
         run: mkdocs build --strict
