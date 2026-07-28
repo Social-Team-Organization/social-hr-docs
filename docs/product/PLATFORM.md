@@ -2,7 +2,7 @@
 
 ![Control plane (platform staff) vs tenant HR workspace (customer users) — two surfaces, one product](./assets/control-plane-vs-tenant.png)
 
-Social HR has two distinct experiences: the **[control plane](./GLOSSARY.md#platform-terms)** for Social HR [platform operators](./ROLES_AND_PERMISSIONS.md#platform-operator), and the **[tenant HR workspace](./GLOSSARY.md#platform-terms)** for each customer organization's users.
+Social HR has two distinct experiences: the **[control plane](./PLATFORM.md)** for Social HR [platform operators](./ROLES_AND_PERMISSIONS.md#platform-operator), and the **[tenant HR workspace](./PLATFORM.md)** for each customer organization's users.
 
 Understanding this split is essential for sales demos, onboarding, and support — staff actions in the control plane directly affect what customer users see in their workspace.
 
@@ -21,8 +21,8 @@ Understanding this split is essential for sales demos, onboarding, and support �
 | Surface | Who uses it | Purpose |
 |---------|-------------|---------|
 | **Marketing site** | Prospects, evaluators | Understand Social HR; request demo or trial |
-| **[Control plane](./GLOSSARY.md#platform-terms)** | Social HR platform staff | Manage customers, [plans](./PLANS.md), [modules](./MODULES.md), audit |
-| **[Tenant HR workspace](./GLOSSARY.md#platform-terms)** | Customer organization's users | Day-to-day HR operations |
+| **[Control plane](./PLATFORM.md)** | Social HR platform staff | Manage customers, [plans](./PLANS.md), [modules](./MODULES.md), audit |
+| **[Tenant HR workspace](./PLATFORM.md)** | Customer organization's users | Day-to-day HR operations |
 
 These are **separate login experiences**. A platform staff account does not automatically work inside a customer workspace, and vice versa. See [Design Decisions — Separate platform and customer experiences](./DESIGN_DECISIONS.md#separate-platform-and-customer-experiences).
 
@@ -47,10 +47,10 @@ The control plane is the operations dashboard on Social HR's primary domain. [Pl
 When creating or editing a customer workspace, platform staff configure:
 
 - **Company name** — displayed to the customer
-- **[Subdomain](./GLOSSARY.md#platform-terms)** — determines the workspace web address
+- **[Subdomain](./PLATFORM.md)** — determines the workspace web address
 - **[Plan](./PLANS.md)** — Trial, Standard, Enterprise, or custom configuration
 - **Status** — trial, active, past due, suspended, or cancelled
-- **[Module overrides](./GLOSSARY.md#platform-terms)** — force specific modules on or off regardless of plan
+- **[Module overrides](./PLATFORM.md)** — force specific modules on or off regardless of plan
 
 Walkthrough: [Use Cases — Provision a new customer trial](./USE_CASES.md#provision-a-new-customer-trial).
 
@@ -68,13 +68,13 @@ Suspension and cancellation take effect on the customer's next login attempt —
 
 ### Opening a customer workspace
 
-From the control plane, staff can open a customer's HR workspace directly — useful for support and verification after [plan changes](./PLANS.md#upgrading-and-downgrading) or [provisioning](./GLOSSARY.md#platform-terms).
+From the control plane, staff can open a customer's HR workspace directly — useful for support and verification after [plan changes](./PLANS.md#upgrading-and-downgrading) or [provisioning](./PLATFORM.md).
 
 ---
 
 ## Tenant HR workspace
 
-Each customer organization accesses Social HR through its own [subdomain](./GLOSSARY.md#platform-terms). This is the full HR application where employees, managers, and HR staff do their daily work.
+Each customer organization accesses Social HR through its own [subdomain](./PLATFORM.md). This is the full HR application where employees, managers, and HR staff do their daily work.
 
 ![Tenant data isolation — each workspace is a self-contained environment](./assets/tenant-isolation.png)
 
@@ -85,7 +85,7 @@ The workspace includes:
 - **Sidebar navigation** — HR [modules](./MODULES.md) enabled by the customer's [plan](./PLANS.md) (and any [overrides](./PLANS.md#per-customer-module-overrides))
 - **Dashboard** — role-aware tiles: headcount, announcements, approval queues, analytics
 - **Navbar** — check-in/check-out, quick actions, language switcher, notifications
-- **Settings** — organization configuration (departments, [work types](./GLOSSARY.md#workforce-visibility-terms), policies, mail, permissions)
+- **Settings** — organization configuration (departments, [work types](./FEATURES.md#geofencing-and-work-type-location-policies), policies, mail, permissions)
 - **Employee profiles** — comprehensive tabs for personal info, attendance, leave, payroll, documents, and more
 
 ### What tenant users do not see
@@ -113,7 +113,7 @@ When a customer's plan changes (for example, Trial → Standard), new modules ap
 
 Each customer workspace maintains its **own user accounts**. A user in one workspace cannot authenticate in another — even if they use the same email address, accounts are separate.
 
-The first [tenant admin](./ROLES_AND_PERMISSIONS.md#tenant-admin) is created during workspace [provisioning](./GLOSSARY.md#platform-terms). Additional users are managed inside the HR application through employee records and permission groups.
+The first [tenant admin](./ROLES_AND_PERMISSIONS.md#tenant-admin) is created during workspace [provisioning](./PLATFORM.md). Additional users are managed inside the HR application through employee records and permission groups.
 
 ---
 
@@ -129,7 +129,7 @@ Platform staff can see customer metadata (name, plan, status, subdomain) in the 
 
 ## Demo workspace
 
-Social HR can point marketing CTAs to a shared demo workspace so evaluators can explore the product without [provisioning](./GLOSSARY.md#platform-terms) a trial. Demo configuration is set at the platform level.
+Social HR can point marketing CTAs to a shared demo workspace so evaluators can explore the product without [provisioning](./PLATFORM.md) a trial. Demo configuration is set at the platform level.
 
 ---
 

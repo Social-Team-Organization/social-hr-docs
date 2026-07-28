@@ -2,7 +2,7 @@
 
 ![HR module ecosystem — employee record at the center, modules for every stage of the employee lifecycle](./assets/modules-ecosystem.png)
 
-Social HR organizes HR capabilities into **[modules](./GLOSSARY.md#platform-terms)** — self-contained areas of the product that appear in the sidebar navigation when entitled by the customer's [plan](./PLANS.md).
+Social HR organizes HR capabilities into **[modules](./PLATFORM.md)** — self-contained areas of the product that appear in the sidebar navigation when entitled by the customer's [plan](./PLANS.md).
 
 Each module below is described as a **mini product page**: purpose, capabilities, who uses it, typical workflow, benefits, and limitations.
 
@@ -33,15 +33,15 @@ For [plan availability](./PLANS.md#full-module-catalog), see Plans. For how modu
 | | |
 |---|---|
 | **Who uses it** | Everyone — HR maintains records; managers view teams; employees update profiles |
-| **Typical workflow** | HR creates employee → assigns department, [work type](./GLOSSARY.md#workforce-visibility-terms), shift → employee self-service begins |
+| **Typical workflow** | HR creates employee → assigns department, [work type](./FEATURES.md#geofencing-and-work-type-location-policies), shift → employee self-service begins |
 | **Depends on** | Organization settings (departments, work types, shifts) in Configuration |
 
 **Key capabilities:**
 
 - Employee profiles with personal, work, bank, and document information
 - Organizational chart and department structure
-- Shift and [work type](./GLOSSARY.md#workforce-visibility-terms) assignments, including rotating schedules
-- Shift requests and [work type requests](./GLOSSARY.md#workforce-visibility-terms) (temporary schedule changes)
+- Shift and [work type](./FEATURES.md#geofencing-and-work-type-location-policies) assignments, including rotating schedules
+- Shift requests and [work type requests](./FEATURES.md#geofencing-and-work-type-location-policies) (temporary schedule changes)
 - Disciplinary actions and policy document distribution
 - Document requests from HR to employees
 
@@ -114,7 +114,7 @@ For [plan availability](./PLANS.md#full-module-catalog), see Plans. For how modu
 
 ![Multiple check-in methods — web, mobile, face verification — all feed attendance records](./assets/attendance-checkin.png)
 
-**Purpose:** Record when employees work — the **authoritative source for [pay hours](./GLOSSARY.md#attendance-and-pay-terms)**.
+**Purpose:** Record when employees work — the **authoritative source for [pay hours](./MODULES.md#attendance)**.
 
 > **At a glance:** Check-in/out · validation · work records · overtime · IP restrictions
 
@@ -128,8 +128,8 @@ For [plan availability](./PLANS.md#full-module-catalog), see Plans. For how modu
 
 - Check-in and check-out from the navbar or attendance screens
 - Attendance records, requests (corrections), and manager validation
-- [Work records](./GLOSSARY.md#attendance-and-pay-terms) — daily matrix used by payroll
-- [Hour account](./GLOSSARY.md#attendance-and-pay-terms) for overtime tracking
+- [Work records](./MODULES.md#attendance) — daily matrix used by payroll
+- [Hour account](./MODULES.md#attendance) for overtime tracking
 - Late arrival and early departure tracking
 - Optional IP restrictions for clock-in locations
 - Integration with geofencing, face check-in, biometric devices, and activity monitoring
@@ -326,7 +326,7 @@ These modules extend attendance and workforce visibility beyond standard HR capa
 
 ![Office geofence boundary vs remote work type — location rules at check-in](./assets/geofencing.png)
 
-**Purpose:** Enforce [location policies](./GLOSSARY.md#workforce-visibility-terms) when employees clock in, based on their [work type](./GLOSSARY.md#workforce-visibility-terms).
+**Purpose:** Enforce [location policies](./FEATURES.md#geofencing-and-work-type-location-policies) when employees clock in, based on their [work type](./FEATURES.md#geofencing-and-work-type-location-policies).
 
 > **At a glance:** Office circle · work type policies · audit log · per-employee bypass
 
@@ -338,12 +338,12 @@ These modules extend attendance and workforce visibility beyond standard HR capa
 
 **Key capabilities:**
 
-- Office [geofence](./GLOSSARY.md#workforce-visibility-terms) circle (latitude, longitude, radius)
-- [Location policy](./GLOSSARY.md#workforce-visibility-terms) per work type: require inside geofence, allow anywhere, or block clock-in
+- Office [geofence](./FEATURES.md#geofencing-and-work-type-location-policies) circle (latitude, longitude, radius)
+- [Location policy](./FEATURES.md#geofencing-and-work-type-location-policies) per work type: require inside geofence, allow anywhere, or block clock-in
 - Audit log of every location evaluation
-- Per-employee [bypass geofence](./GLOSSARY.md#workforce-visibility-terms) for exceptions
+- Per-employee [bypass geofence](./FEATURES.md#geofencing-and-work-type-location-policies) for exceptions
 
-**Benefits:** Flexible hybrid rules; temporary overrides via [work type requests](./GLOSSARY.md#workforce-visibility-terms); full audit trail.
+**Benefits:** Flexible hybrid rules; temporary overrides via [work type requests](./FEATURES.md#geofencing-and-work-type-location-policies); full audit trail.
 
 **Limitations:** Gates check-in only — does not calculate pay. Requires device location permission.
 
@@ -368,7 +368,7 @@ Deep dive: [Features — Geofencing](./FEATURES.md#geofencing-and-work-type-loca
 
 **Key capabilities:**
 
-- Employee [face registration](./GLOSSARY.md#workforce-visibility-terms) (minimum three successful captures)
+- Employee [face registration](./FEATURES.md#geofencing-and-work-type-location-policies) (minimum three successful captures)
 - Verification at check-in via browser webcam
 - Re-enrollment requests when verification fails
 - Privacy-focused: stores mathematical face templates, not enrollment photos
@@ -398,10 +398,10 @@ Deep dive: [Features — Face check-in](./FEATURES.md#face-check-in). Policy: [F
 
 **Key capabilities:**
 
-- [Heartbeats](./GLOSSARY.md#workforce-visibility-terms) reporting keyboard, mouse, idle time, and active window
+- [Heartbeats](./FEATURES.md#geofencing-and-work-type-location-policies) reporting keyboard, mouse, idle time, and active window
 - Activity segments: active, idle, and review-required
 - Optional periodic screenshots with configurable retention
-- [Productivity score](./GLOSSARY.md#workforce-visibility-terms) (informational — not on payslips)
+- [Productivity score](./FEATURES.md#geofencing-and-work-type-location-policies) (informational — not on payslips)
 - Manager classification: Paid, Unpaid, or Meeting
 
 > **Important:** Activity monitoring does **not** automatically change [attendance](./MODULES.md#attendance) or [payroll](./MODULES.md#payroll). See [Design Decisions — Attendance drives pay](./DESIGN_DECISIONS.md#attendance-drives-pay-activity-provides-oversight).
@@ -446,5 +446,4 @@ These are accessed through the Configuration section of the sidebar.
 - [Plans](./PLANS.md) — which modules each tier includes
 - [Features](./FEATURES.md) — deep dives on geofencing, face check-in, activity, etc.
 - [How It Works](./HOW_IT_WORKS.md) — module connections and data flows
-- [Glossary — HR modules](./GLOSSARY.md#hr-modules) — one-line definitions
 - [Use Cases](./USE_CASES.md) — scenarios by module

@@ -24,7 +24,7 @@ Feature details: [Features](./FEATURES.md). Rationale: [Design Decisions](./DESI
 
 | Policy | What organizations experience |
 |--------|------------------------------|
-| **[Workspace isolation](./GLOSSARY.md#platform-terms)** | Each customer organization's data is completely separate. No user in one workspace can see another workspace's employees, records, or files. |
+| **[Workspace isolation](./PLATFORM.md)** | Each customer organization's data is completely separate. No user in one workspace can see another workspace's employees, records, or files. |
 | **File separation** | Uploaded documents, photos, and screenshots are stored in a namespace reserved for that organization. |
 | **Separate user accounts** | Users in one workspace cannot log into another, even with the same email address. |
 | **One organization per workspace** | There is no company switcher. Each workspace represents exactly one organization. |
@@ -41,7 +41,7 @@ Platform detail: [Platform — Data and file isolation](./PLATFORM.md#data-and-f
 |--------|------------------------------|
 | **Suspended account** | All users are signed out and cannot log in. Data is retained. Message explains the suspension. |
 | **Cancelled account** | Same as suspended — login blocked, data retained until deletion. |
-| **Disabled [module](./GLOSSARY.md#platform-terms)** | Module hidden from navigation and inaccessible even via direct link. Data from that module is retained. |
+| **Disabled [module](./PLATFORM.md)** | Module hidden from navigation and inaccessible even via direct link. Data from that module is retained. |
 | **[Plan](./PLANS.md) change** | Module visibility updates on next page load. No data loss from upgrades or downgrades. |
 | **Face check-in without entitlement** | If [attendance](./MODULES.md#attendance) is enabled but [face check-in](./MODULES.md#face-check-in) is not on the plan, face verification features are unavailable. |
 
@@ -53,10 +53,10 @@ Scenario: [Use Cases — Suspend non-paying account](./USE_CASES.md#suspend-a-no
 
 | Policy | Rule |
 |--------|------|
-| **[Geofence](./GLOSSARY.md#workforce-visibility-terms) inactive** | When geofencing is not activated by HR admin, all location checks pass — no enforcement. |
-| **[Bypass geofence](./GLOSSARY.md#workforce-visibility-terms)** | HR can flag individual employees to skip location checks entirely (executive travel, special arrangements). |
-| **[Work type](./GLOSSARY.md#workforce-visibility-terms) policy** | Each work type has one of three rules: require inside geofence, allow anywhere, or block clock-in. |
-| **[Effective work type](./GLOSSARY.md#workforce-visibility-terms)** | The system determines today's work type using: approved request → weekday override → rotating assignment → default. |
+| **[Geofence](./FEATURES.md#geofencing-and-work-type-location-policies) inactive** | When geofencing is not activated by HR admin, all location checks pass — no enforcement. |
+| **[Bypass geofence](./FEATURES.md#geofencing-and-work-type-location-policies)** | HR can flag individual employees to skip location checks entirely (executive travel, special arrangements). |
+| **[Work type](./FEATURES.md#geofencing-and-work-type-location-policies) policy** | Each work type has one of three rules: require inside geofence, allow anywhere, or block clock-in. |
+| **[Effective work type](./FEATURES.md#geofencing-and-work-type-location-policies)** | The system determines today's work type using: approved request → weekday override → rotating assignment → default. |
 | **GPS required** | "Require inside geofence" denies check-in if the device does not provide location coordinates. |
 | **Audit trail** | Every location evaluation is logged — success or failure — for review. |
 | **Pay authority** | Geofencing gates check-in only. It does not calculate or modify pay hours. |
@@ -83,7 +83,7 @@ Feature: [Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies).
 | Policy | Rule |
 |--------|------|
 | **Activation** | HR admin must enable face check-in in settings. |
-| **[Enrollment minimum](./GLOSSARY.md#workforce-visibility-terms)** | Employees must complete at least three successful face captures before verification works. |
+| **[Enrollment minimum](./FEATURES.md#geofencing-and-work-type-location-policies)** | Employees must complete at least three successful face captures before verification works. |
 | **Verification at check-in** | Live webcam capture compared against enrolled templates. |
 | **Enforcement mode** | HR can optionally require face verification on every check-in. |
 | **Privacy** | System stores mathematical face templates, not enrollment photos. |
@@ -99,11 +99,11 @@ Feature: [Face check-in](./FEATURES.md#face-check-in). Rationale: [Design Decisi
 | Policy | Rule | Default |
 |--------|------|---------|
 | **One policy per organization** | Single activity tracking configuration applies to all employees. | Auto-created |
-| **Idle classification** | No keyboard/mouse input for configured duration → [idle segment](./GLOSSARY.md#workforce-visibility-terms). | 5 minutes |
+| **Idle classification** | No keyboard/mouse input for configured duration → [idle segment](./FEATURES.md#geofencing-and-work-type-location-policies). | 5 minutes |
 | **Review required** | Idle exceeds review threshold → flagged for manager decision. | 15 minutes |
-| **Idle pay** | Idle time does **not** automatically reduce [attendance](./GLOSSARY.md#attendance-and-pay-terms) or payslip hours. | — |
-| **[Manager decisions](./GLOSSARY.md#workforce-visibility-terms)** | Review segments require classification: Paid, Unpaid, or Meeting. | — |
-| **[Productivity score](./GLOSSARY.md#workforce-visibility-terms)** | Calculated for display only — never appears on payslips. | — |
+| **Idle pay** | Idle time does **not** automatically reduce [attendance](./MODULES.md#attendance) or payslip hours. | — |
+| **[Manager decisions](./FEATURES.md#geofencing-and-work-type-location-policies)** | Review segments require classification: Paid, Unpaid, or Meeting. | — |
+| **[Productivity score](./FEATURES.md#geofencing-and-work-type-location-policies)** | Calculated for display only — never appears on payslips. | — |
 | **Screenshots** | Optional; can be disabled entirely. | Enabled, 5-minute interval |
 | **Screenshot retention** | Screenshots older than configured days are deleted. | 30 days |
 | **Clock-in coupling** | Organization can encourage desktop app use at check-in. | Off by default |
@@ -119,13 +119,13 @@ Feature: [Activity tracking](./FEATURES.md#activity-tracking-desktop-monitoring)
 
 | Policy | Rule |
 |--------|------|
-| **[Pay authority](./GLOSSARY.md#attendance-and-pay-terms)** | Attendance records and [work records](./GLOSSARY.md#attendance-and-pay-terms) are the source for payroll hour calculations. |
-| **[Validation workflow](./GLOSSARY.md#attendance-and-pay-terms)** | Managers review and validate attendance before payroll (organizational process). |
-| **[Grace time](./GLOSSARY.md#attendance-and-pay-terms)** | Configurable tolerance for late arrivals before flagging. |
+| **[Pay authority](./MODULES.md#attendance)** | Attendance records and [work records](./MODULES.md#attendance) are the source for payroll hour calculations. |
+| **[Validation workflow](./MODULES.md#attendance)** | Managers review and validate attendance before payroll (organizational process). |
+| **[Grace time](./MODULES.md#attendance)** | Configurable tolerance for late arrivals before flagging. |
 | **IP restriction** | Optional allowlist — check-in only permitted from specified IP addresses. |
-| **[Attendance request](./GLOSSARY.md#attendance-and-pay-terms)** | Employees can request attendance corrections; managers approve or reject. |
+| **[Attendance request](./MODULES.md#attendance)** | Employees can request attendance corrections; managers approve or reject. |
 | **[Biometric devices](./MODULES.md#biometric-devices)** | Hardware punches create attendance records directly ([Enterprise plan](./PLANS.md#enterprise)). |
-| **[Hour account](./GLOSSARY.md#attendance-and-pay-terms)** | Overtime tracked separately; can link to compensatory leave when enabled. |
+| **[Hour account](./MODULES.md#attendance)** | Overtime tracked separately; can link to compensatory leave when enabled. |
 
 ![Attendance sources and pay authority — geofencing and face gate; activity does not affect pay](./assets/attendance-pay-authority.png)
 
@@ -139,9 +139,9 @@ Feature: [Attendance](./FEATURES.md#attendance-and-check-in). Module: [Attendanc
 |--------|------|
 | **Approval workflow** | Leave requests require manager approval (single or multi-step). |
 | **Multi-step approvals** | HR can configure additional approval levels via Configuration → Multiple Approvals. |
-| **[Restrict leaves](./GLOSSARY.md#leave-terms)** | HR can block leave applications during specific date ranges. |
-| **[Company leave](./GLOSSARY.md#leave-terms)** | Organization-wide recurring non-working patterns (e.g., summer Fridays). |
-| **[Compensatory leave](./GLOSSARY.md#leave-terms)** | Links to overtime from attendance hour account when feature is enabled. |
+| **[Restrict leaves](./FEATURES.md#leave-management)** | HR can block leave applications during specific date ranges. |
+| **[Company leave](./FEATURES.md#leave-management)** | Organization-wide recurring non-working patterns (e.g., summer Fridays). |
+| **[Compensatory leave](./FEATURES.md#leave-management)** | Links to overtime from attendance hour account when feature is enabled. |
 | **Holidays** | Configured holidays affect leave balance calculations and attendance work records. |
 | **Balance deduction** | Approved leave deducts from employee's allocated balance for that leave type. |
 
@@ -222,4 +222,3 @@ Also listed: [Overview — What Social HR does not do](./OVERVIEW.md#what-social
 - [Plans](./PLANS.md) — entitlement rules
 - [How It Works](./HOW_IT_WORKS.md) — policy application in workflows
 - [Roles & Permissions](./ROLES_AND_PERMISSIONS.md) — who configures policies
-- [Glossary](./GLOSSARY.md) — term definitions

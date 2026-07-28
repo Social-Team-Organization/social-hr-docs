@@ -23,7 +23,7 @@ Personas map to [roles and permissions](./ROLES_AND_PERMISSIONS.md) within the p
 
 | Persona | Where they work | Primary goals |
 |---------|-----------------|---------------|
-| **[Platform operator](./ROLES_AND_PERMISSIONS.md#platform-operator)** | [Control plane](./GLOSSARY.md#platform-terms) dashboard | [Provision](./GLOSSARY.md#platform-terms) workspaces, assign [plans](./PLANS.md), manage account status |
+| **[Platform operator](./ROLES_AND_PERMISSIONS.md#platform-operator)** | [Control plane](./PLATFORM.md) dashboard | [Provision](./PLATFORM.md) workspaces, assign [plans](./PLANS.md), manage account status |
 | **[Tenant HR admin](./ROLES_AND_PERMISSIONS.md#tenant-admin)** | Customer HR workspace | Configure organization, policies, permissions |
 | **[Manager](./ROLES_AND_PERMISSIONS.md#manager)** | Customer HR workspace | Approve requests, validate attendance, review activity |
 | **[Employee](./ROLES_AND_PERMISSIONS.md#employee)** | Customer HR workspace (+ optional desktop app) | Clock in, request leave, view payslips |
@@ -36,7 +36,7 @@ Personas map to [roles and permissions](./ROLES_AND_PERMISSIONS.md) within the p
 
 ### Provision a new customer trial
 
-A sales representative closes a deal with Acme Corp for a 30-day evaluation. The platform operator logs into the [control plane](./PLATFORM.md), opens **Tenants → Create**, enters "Acme Corp" with [subdomain](./GLOSSARY.md#platform-terms) `acme`, and selects the **[Trial plan](./PLANS.md#trial)**.
+A sales representative closes a deal with Acme Corp for a 30-day evaluation. The platform operator logs into the [control plane](./PLATFORM.md), opens **Tenants → Create**, enters "Acme Corp" with [subdomain](./PLATFORM.md) `acme`, and selects the **[Trial plan](./PLANS.md#trial)**.
 
 Within moments, Acme's isolated workspace exists at `acme.socialhr.com` with [Employees](./MODULES.md#employees), [Attendance](./MODULES.md#attendance), [Leave](./MODULES.md#leave), and [Face Check-In](./MODULES.md#face-check-in) enabled. The operator shares the URL and initial admin credentials with Acme's HR director.
 
@@ -81,8 +81,8 @@ If Gamma were on Standard, the operator could add a [module override](./PLANS.md
 Acme Corp has mostly office workers and wants to ensure employees clock in from the office. The HR admin:
 
 1. Confirms [Geofencing](./MODULES.md#geofencing) is available ([Enterprise plan](./PLANS.md#enterprise))
-2. Opens Settings → Geo & Face Config, sets office coordinates and a 200-meter radius, and activates the [geofence](./GLOSSARY.md#workforce-visibility-terms)
-3. Reviews [work types](./GLOSSARY.md#workforce-visibility-terms): Office requires inside geofence; Remote allows anywhere
+2. Opens Settings → Geo & Face Config, sets office coordinates and a 200-meter radius, and activates the [geofence](./FEATURES.md#geofencing-and-work-type-location-policies)
+3. Reviews [work types](./FEATURES.md#geofencing-and-work-type-location-policies): Office requires inside geofence; Remote allows anywhere
 4. Assigns most employees the Office work type on their work information
 
 ![Office geofence vs remote work type at check-in](./assets/geofencing.png)
@@ -139,9 +139,9 @@ Flow: [How It Works — Work type resolution](./HOW_IT_WORKS.md#work-type-resolu
 
 ### Approve remote work for one day
 
-Sarah usually works from the office but needs to work from home next Tuesday for a home repair. She submits a **[Work Type Request](./GLOSSARY.md#workforce-visibility-terms)** for Remote on that date.
+Sarah usually works from the office but needs to work from home next Tuesday for a home repair. She submits a **[Work Type Request](./FEATURES.md#geofencing-and-work-type-location-policies)** for Remote on that date.
 
-Her manager sees the request in the dashboard **Work Type Requests To Approve** queue, reviews it, and approves. On Tuesday, Sarah's [effective work type](./GLOSSARY.md#workforce-visibility-terms) is Remote — she can check in from anywhere.
+Her manager sees the request in the dashboard **Work Type Requests To Approve** queue, reviews it, and approves. On Tuesday, Sarah's [effective work type](./FEATURES.md#geofencing-and-work-type-location-policies) is Remote — she can check in from anywhere.
 
 **Outcome:** Temporary policy override without changing Sarah's permanent work type.
 
@@ -181,7 +181,7 @@ Daily flow: [How It Works — Morning](./HOW_IT_WORKS.md#morning-starting-work).
 
 ### Clock in with face verification
 
-Omar completed [face registration](./GLOSSARY.md#workforce-visibility-terms) last week. At check-in, his webcam activates, captures his face, and the system matches it against his enrolled templates. Match confirmed — attendance recorded.
+Omar completed [face registration](./FEATURES.md#geofencing-and-work-type-location-policies) last week. At check-in, his webcam activates, captures his face, and the system matches it against his enrolled templates. Match confirmed — attendance recorded.
 
 If verification fails, Omar can retry or submit a re-enrollment request for HR review.
 
@@ -197,7 +197,7 @@ Feature: [Leave management](./FEATURES.md#leave-management).
 
 ### Use the desktop app while working
 
-Khalid installs Social HR Desktop, logs in, and checks in. The app runs in the background, sending activity heartbeats. He can view **My Activity** to see his daily timeline and [productivity score](./GLOSSARY.md#workforce-visibility-terms).
+Khalid installs Social HR Desktop, logs in, and checks in. The app runs in the background, sending activity heartbeats. He can view **My Activity** to see his daily timeline and [productivity score](./FEATURES.md#geofencing-and-work-type-location-policies).
 
 At end of day, he checks out — both attendance and activity session close.
 
@@ -259,7 +259,7 @@ Feature: [Payroll](./FEATURES.md#payroll).
 
 - Default work type: Hybrid (requires geofence)
 - Weekday override: Friday → Remote
-- Executive has [bypass geofence](./GLOSSARY.md#workforce-visibility-terms) flag for international travel
+- Executive has [bypass geofence](./FEATURES.md#geofencing-and-work-type-location-policies) flag for international travel
 
 **Monday (employee):**
 
@@ -268,7 +268,7 @@ Feature: [Payroll](./FEATURES.md#payroll).
 
 **Friday (employee):**
 
-- [Effective work type](./GLOSSARY.md#workforce-visibility-terms) is Remote — check in from home
+- [Effective work type](./FEATURES.md#geofencing-and-work-type-location-policies) is Remote — check in from home
 - No geofence check applied
 
 **Thursday (executive traveling):**

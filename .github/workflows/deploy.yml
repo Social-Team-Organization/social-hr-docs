@@ -35,6 +35,7 @@ jobs:
         run: |
           test -f docs/index.md
           test -f docs/assets/socialhr-logo.png
+          test -f docs/ar/assets/socialhr-logo.png
           test -f docs/product/README.md
 
       - name: Build site

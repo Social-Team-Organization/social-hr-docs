@@ -10,7 +10,7 @@ Social HR uses role-based access within each workspace. Permissions are assigned
 >
 > | Role | Surface | Scope |
 > |------|---------|-------|
-> | [Platform operator](#platform-operator) | [Control plane](./GLOSSARY.md#platform-terms) | Manage tenants, plans, status |
+> | [Platform operator](#platform-operator) | [Control plane](./PLATFORM.md) | Manage tenants, plans, status |
 > | [Tenant admin](#tenant-admin) | Customer workspace | Full org + settings |
 > | [HR administrator](#hr-administrator) | Customer workspace | People operations |
 > | [Manager](#manager) | Customer workspace | Approvals + team visibility |
@@ -23,7 +23,7 @@ Scenarios by persona: [Use Cases](./USE_CASES.md).
 
 ## Platform operator
 
-**Where:** [Control plane](./GLOSSARY.md#platform-terms) dashboard on Social HR's primary domain.
+**Where:** [Control plane](./PLATFORM.md) dashboard on Social HR's primary domain.
 
 **Who:** Social HR staff with platform access credentials.
 
@@ -31,9 +31,9 @@ Scenarios by persona: [Use Cases](./USE_CASES.md).
 
 | Area | Actions |
 |------|---------|
-| **[Tenant](./GLOSSARY.md#platform-terms) lifecycle** | Create, view, edit, suspend, reactivate, delete customer workspaces |
+| **[Tenant](./PLATFORM.md) lifecycle** | Create, view, edit, suspend, reactivate, delete customer workspaces |
 | **[Plan](./PLANS.md) management** | Assign and change subscription plans |
-| **[Module overrides](./GLOSSARY.md#platform-terms)** | Force specific modules on or off for individual customers |
+| **[Module overrides](./PLATFORM.md)** | Force specific modules on or off for individual customers |
 | **Account status** | Set trial, active, past due, suspended, cancelled |
 | **Support access** | Open customer workspaces for verification and troubleshooting |
 | **Catalog management** | View plans and module catalog |
@@ -56,13 +56,13 @@ Scenarios: [Use Cases — Platform operator](./USE_CASES.md#platform-operator-sc
 
 **Where:** Customer HR workspace.
 
-**Who:** The organization's primary HR technology administrator — often the first user created during [provisioning](./GLOSSARY.md#platform-terms).
+**Who:** The organization's primary HR technology administrator — often the first user created during [provisioning](./PLATFORM.md).
 
 ### Responsibilities
 
 | Area | Actions |
 |------|---------|
-| **Organization setup** | Departments, job positions, [work types](./GLOSSARY.md#workforce-visibility-terms), shifts, holidays |
+| **Organization setup** | Departments, job positions, [work types](./FEATURES.md#geofencing-and-work-type-location-policies), shifts, holidays |
 | **Policy configuration** | [Geofencing](./MODULES.md#geofencing), [face check-in](./MODULES.md#face-check-in), [activity tracking](./MODULES.md#activity-tracking), attendance rules |
 | **User management** | Create users, assign permission groups, manage employee permissions |
 | **Mail configuration** | Organization email server settings |
@@ -117,9 +117,9 @@ Module reference: [Modules](./MODULES.md).
 
 | Area | Actions |
 |------|---------|
-| **Approvals** | Leave requests, attendance requests, [work type requests](./GLOSSARY.md#workforce-visibility-terms), shift requests, asset requests, overtime |
-| **[Attendance validation](./GLOSSARY.md#attendance-and-pay-terms)** | Review and validate team attendance records |
-| **Activity review** | Classify [review segments](./GLOSSARY.md#workforce-visibility-terms) (Paid / Unpaid / Meeting) for direct reports |
+| **Approvals** | Leave requests, attendance requests, [work type requests](./FEATURES.md#geofencing-and-work-type-location-policies), shift requests, asset requests, overtime |
+| **[Attendance validation](./MODULES.md#attendance)** | Review and validate team attendance records |
+| **Activity review** | Classify [review segments](./FEATURES.md#geofencing-and-work-type-location-policies) (Paid / Unpaid / Meeting) for direct reports |
 | **Team visibility** | View team profiles, attendance, leave balances, activity timelines |
 | **Performance** | Review objectives, key results, and feedback for direct reports (when entitled) |
 | **Recruitment** | Participate in interviews and candidate evaluation (when assigned) |
@@ -141,7 +141,7 @@ Scenarios: [Use Cases — Manager](./USE_CASES.md#manager-scenarios).
 
 ## Employee
 
-**Where:** Customer HR workspace (+ optional [desktop app](./GLOSSARY.md#workforce-visibility-terms)).
+**Where:** Customer HR workspace (+ optional [desktop app](./FEATURES.md#geofencing-and-work-type-location-policies)).
 
 **Who:** Every person with a user account in the organization.
 
@@ -149,12 +149,12 @@ Scenarios: [Use Cases — Manager](./USE_CASES.md#manager-scenarios).
 
 | Area | Actions |
 |------|---------|
-| **[Attendance](./GLOSSARY.md#attendance-and-pay-terms)** | Check in and out daily |
-| **[Leave](./GLOSSARY.md#leave-terms)** | Request time off, view balances |
+| **[Attendance](./MODULES.md#attendance)** | Check in and out daily |
+| **[Leave](./FEATURES.md#leave-management)** | Request time off, view balances |
 | **Profile** | View and update own personal information |
 | **Requests** | Submit attendance corrections, shift changes, work type requests, reimbursements, asset requests |
-| **[Face registration](./GLOSSARY.md#workforce-visibility-terms)** | Enroll face templates for check-in verification |
-| **Activity** | Run desktop app, view own activity timeline and [productivity score](./GLOSSARY.md#workforce-visibility-terms) |
+| **[Face registration](./FEATURES.md#geofencing-and-work-type-location-policies)** | Enroll face templates for check-in verification |
+| **Activity** | Run desktop app, view own activity timeline and [productivity score](./FEATURES.md#geofencing-and-work-type-location-policies) |
 | **Payslips** | View own payslips (when permitted) |
 | **[Helpdesk](./MODULES.md#helpdesk)** | Create support tickets |
 | **[Projects](./MODULES.md#projects)** | Log timesheet hours on assigned tasks (when entitled) |
@@ -276,5 +276,5 @@ Policy: [Account access](./POLICIES.md#account-access-and-entitlements).
 - [Platform](./PLATFORM.md) — control plane vs workspace
 - [Modules](./MODULES.md) — what each role interacts with
 - [Policies](./POLICIES.md) — rules governing access
-- [Glossary — Platform terms](./GLOSSARY.md#platform-terms) — role-related definitions
+- [Platform](./PLATFORM.md) — role-related platform concepts
 - [How It Works](./HOW_IT_WORKS.md) — workflows by role

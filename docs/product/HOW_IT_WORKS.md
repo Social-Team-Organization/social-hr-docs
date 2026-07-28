@@ -19,7 +19,7 @@ No technical implementation details. Focus is on **what happens**, **in what ord
 
 Almost everything in Social HR connects to the **employee record**. When someone joins the organization, an employee profile is created (directly or via [recruitment](./MODULES.md#recruitment) → [onboarding](./MODULES.md#onboarding)). That record becomes the anchor for:
 
-- Work schedule (shift, [work type](./GLOSSARY.md#workforce-visibility-terms))
+- Work schedule (shift, [work type](./FEATURES.md#geofencing-and-work-type-location-policies))
 - [Attendance](./MODULES.md#attendance) and [leave](./MODULES.md#leave)
 - [Payroll](./MODULES.md#payroll) contract
 - [Performance](./MODULES.md#performance-pms) goals
@@ -67,15 +67,15 @@ Scenario walkthrough: [Use Cases — Hire through the pipeline](./USE_CASES.md#h
 1. Employee opens Social HR (web or desktop app)
 2. Clicks **Check-In** in the navbar
 3. System evaluates policies in order:
-   - Is [geofencing](./FEATURES.md#geofencing-and-work-type-location-policies) active? → check location against [work type](./GLOSSARY.md#workforce-visibility-terms) policy
+   - Is [geofencing](./FEATURES.md#geofencing-and-work-type-location-policies) active? → check location against [work type](./FEATURES.md#geofencing-and-work-type-location-policies) policy
    - Is [face check-in](./FEATURES.md#face-check-in) enabled? → verify identity via webcam
    - Is [activity tracking](./FEATURES.md#activity-tracking-desktop-monitoring) required? → confirm desktop app connected
-4. Check-in succeeds → [attendance record](./GLOSSARY.md#attendance-and-pay-terms) created
+4. Check-in succeeds → [attendance record](./MODULES.md#attendance) created
 5. If desktop app running → activity session begins
 
 ### During the day
 
-- Employee works; desktop app sends activity [heartbeats](./GLOSSARY.md#workforce-visibility-terms) (if enabled)
+- Employee works; desktop app sends activity [heartbeats](./FEATURES.md#geofencing-and-work-type-location-policies) (if enabled)
 - Idle time classified automatically; long idle flagged for manager review
 - Employee may submit [quick actions](./FEATURES.md#quick-actions) (leave, work type change, reimbursement)
 - Manager sees approval queues on [dashboard](./FEATURES.md#dashboard)
@@ -85,7 +85,7 @@ Scenario walkthrough: [Use Cases — Hire through the pipeline](./USE_CASES.md#h
 1. Employee clicks **Check-Out**
 2. Attendance record completed with end time
 3. Activity session closes
-4. Employee can view daily activity summary and [productivity score](./GLOSSARY.md#workforce-visibility-terms)
+4. Employee can view daily activity summary and [productivity score](./FEATURES.md#geofencing-and-work-type-location-policies)
 
 Scenario: [Use Cases — Clock in from the office](./USE_CASES.md#clock-in-from-the-office).
 
@@ -99,12 +99,12 @@ When [geofencing](./MODULES.md#geofencing) is active, the system must determine 
 
 **Priority order:**
 
-1. **Approved [work type request](./GLOSSARY.md#workforce-visibility-terms)** for today (highest priority)
+1. **Approved [work type request](./FEATURES.md#geofencing-and-work-type-location-policies)** for today (highest priority)
 2. **Weekday override** (e.g., Friday = Remote)
 3. **Rotating work type assignment**
 4. **Default work type** on employee record
 
-Then the [location policy](./GLOSSARY.md#workforce-visibility-terms) is applied → allow or deny check-in.
+Then the [location policy](./FEATURES.md#geofencing-and-work-type-location-policies) is applied → allow or deny check-in.
 
 **Example — hybrid employee (Mon–Thu office, Fri remote):**
 
@@ -133,7 +133,7 @@ Multiple methods can create or gate attendance, but **attendance records drive p
 | [Biometric devices](./MODULES.md#biometric-devices) | Hardware punch creates attendance | Creates attendance records |
 | [Activity desktop app](./FEATURES.md#activity-tracking-desktop-monitoring) | Monitors presence during session | **No direct payslip impact** |
 | Approved [leave](./MODULES.md#leave) | Marks days on leave | Reduces working days in payroll |
-| [Work records](./GLOSSARY.md#attendance-and-pay-terms) | Daily matrix | Feeds payroll calculations |
+| [Work records](./MODULES.md#attendance) | Daily matrix | Feeds payroll calculations |
 
 **Key principle:** [Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring) provides oversight. Managers classify ambiguous idle time (Paid / Unpaid / Meeting), but idle time never automatically reduces attendance hours or payslip amounts.
 
@@ -157,7 +157,7 @@ Rationale: [Design Decisions — Attendance drives pay](./DESIGN_DECISIONS.md#at
 
 Leave workflow visual: [Leave workflow illustration](./assets/leave-workflow.png).
 
-[Compensatory leave](./GLOSSARY.md#leave-terms) (when enabled) links overtime from the attendance [hour account](./GLOSSARY.md#attendance-and-pay-terms) back to leave balances.
+[Compensatory leave](./FEATURES.md#leave-management) (when enabled) links overtime from the attendance [hour account](./MODULES.md#attendance) back to leave balances.
 
 ---
 
@@ -243,4 +243,3 @@ HR administrators configure these once; effects propagate to leave, attendance, 
 - [Use Cases](./USE_CASES.md) — narrative scenarios
 - [Policies](./POLICIES.md) — rules governing these flows
 - [Plans](./PLANS.md) — module availability by tier
-- [Glossary](./GLOSSARY.md) — key terms

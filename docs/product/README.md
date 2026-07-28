@@ -18,7 +18,6 @@ This is **not** developer documentation. It explains capabilities, policies, and
 | **HR director or admin** | [Modules](./MODULES.md) → [Policies](./POLICIES.md) → [Use Cases](./USE_CASES.md) | Day-to-day capabilities, rules, and real scenarios |
 | **Implementation consultant** | [How It Works](./HOW_IT_WORKS.md) → [Roles & Permissions](./ROLES_AND_PERMISSIONS.md) → [Platform](./PLATFORM.md) | Flows, roles, and the platform vs workspace split |
 | **Sales or onboarding** | [Platform](./PLATFORM.md) → [Plans](./PLANS.md) → [Use Cases](./USE_CASES.md) | Demo narrative, packaging, and customer stories |
-| **Localization or training** | [Glossary](./GLOSSARY.md) | Terms and consistency rules |
 
 ---
 
@@ -30,7 +29,6 @@ This is **not** developer documentation. It explains capabilities, policies, and
 | HR directors and admins | [Modules](./MODULES.md), [Policies](./POLICIES.md), [Use Cases](./USE_CASES.md) |
 | Implementation consultants | [How It Works](./HOW_IT_WORKS.md), [Roles & Permissions](./ROLES_AND_PERMISSIONS.md) |
 | Sales and onboarding | [Platform](./PLATFORM.md), [Plans](./PLANS.md), [Use Cases](./USE_CASES.md) |
-| Localization and training | [Glossary](./GLOSSARY.md) |
 
 ---
 
@@ -38,17 +36,16 @@ This is **not** developer documentation. It explains capabilities, policies, and
 
 | Document | Description | Key visual |
 |----------|-------------|------------|
-| [OVERVIEW.md](./OVERVIEW.md) | What Social HR is, who it serves, multi-[tenant](./GLOSSARY.md#platform-terms) SaaS in plain terms | [Platform overview](./assets/social-hr-overview.png) |
-| [PLATFORM.md](./PLATFORM.md) | [Control plane](./GLOSSARY.md#platform-terms) vs [tenant HR workspace](./GLOSSARY.md#platform-terms) — what each side sees | [Two surfaces](./assets/control-plane-vs-tenant.png) |
-| [PLANS.md](./PLANS.md) | Trial, Standard, and Enterprise — [modules](./GLOSSARY.md#platform-terms) and known limits | [Plan comparison](./assets/plans-comparison.png) |
-| [MODULES.md](./MODULES.md) | Each HR [module](./GLOSSARY.md#hr-modules) as a mini product page | [Module ecosystem](./assets/modules-ecosystem.png) |
-| [FEATURES.md](./FEATURES.md) | Deep dives: attendance, [geofencing](./GLOSSARY.md#workforce-visibility-terms), [face check-in](./GLOSSARY.md#workforce-visibility-terms), [activity tracking](./GLOSSARY.md#workforce-visibility-terms) | Feature illustrations throughout |
+| [OVERVIEW.md](./OVERVIEW.md) | What Social HR is, who it serves, multi-[tenant](./PLATFORM.md) SaaS in plain terms | [Platform overview](./assets/social-hr-overview.png) |
+| [PLATFORM.md](./PLATFORM.md) | [Control plane](./PLATFORM.md) vs [tenant HR workspace](./PLATFORM.md) — what each side sees | [Two surfaces](./assets/control-plane-vs-tenant.png) |
+| [PLANS.md](./PLANS.md) | Trial, Standard, and Enterprise — [modules](./PLATFORM.md) and known limits | [Plan comparison](./assets/plans-comparison.png) |
+| [MODULES.md](./MODULES.md) | Each HR [module](./MODULES.md) as a mini product page | [Module ecosystem](./assets/modules-ecosystem.png) |
+| [FEATURES.md](./FEATURES.md) | Deep dives: attendance, [geofencing](./FEATURES.md#geofencing-and-work-type-location-policies), [face check-in](./FEATURES.md#geofencing-and-work-type-location-policies), [activity tracking](./FEATURES.md#geofencing-and-work-type-location-policies) | Feature illustrations throughout |
 | [HOW_IT_WORKS.md](./HOW_IT_WORKS.md) | Hire-to-retire flows; how [modules](./MODULES.md) connect | [Lifecycle journey](./assets/hire-to-retire.png) |
 | [USE_CASES.md](./USE_CASES.md) | Personas and narrative scenarios | [Roles overview](./assets/roles-hierarchy.png) |
 | [POLICIES.md](./POLICIES.md) | Rules organizations experience in the product | [Data isolation](./assets/data-isolation-policy.png) |
 | [DESIGN_DECISIONS.md](./DESIGN_DECISIONS.md) | Why Social HR was built this way — rationale and user impact | — |
-| [ROLES_AND_PERMISSIONS.md](./ROLES_AND_PERMISSIONS.md) | [Platform operator](./GLOSSARY.md#platform-terms), admin, HR, manager, employee | [Role hierarchy](./assets/roles-hierarchy.png) |
-| [GLOSSARY.md](./GLOSSARY.md) | Business terms used across product documentation | — |
+| [ROLES_AND_PERMISSIONS.md](./ROLES_AND_PERMISSIONS.md) | [Platform operator](./PLATFORM.md), admin, HR, manager, employee | [Role hierarchy](./assets/roles-hierarchy.png) |
 
 ---
 

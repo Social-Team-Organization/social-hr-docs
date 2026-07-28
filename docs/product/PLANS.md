@@ -2,9 +2,9 @@
 
 ![Trial, Standard, and Enterprise plan comparison — modules included at each tier](./assets/plans-comparison.png)
 
-Social HR sells through **[subscription plans](./GLOSSARY.md#platform-terms)** that bundle HR [modules](./MODULES.md). Each customer workspace is assigned one plan, which determines which features appear and are usable.
+Social HR sells through **[subscription plans](./PLATFORM.md)** that bundle HR [modules](./MODULES.md). Each customer workspace is assigned one plan, which determines which features appear and are usable.
 
-[Platform operators](./ROLES_AND_PERMISSIONS.md#platform-operator) can also apply **[per-customer module overrides](./GLOSSARY.md#platform-terms)** to enable or disable specific modules outside the plan defaults — useful for pilots, custom deals, or temporary restrictions.
+[Platform operators](./ROLES_AND_PERMISSIONS.md#platform-operator) can also apply **[per-customer module overrides](./PLATFORM.md)** to enable or disable specific modules outside the plan defaults — useful for pilots, custom deals, or temporary restrictions.
 
 > **At a glance**
 >
@@ -20,7 +20,7 @@ Social HR sells through **[subscription plans](./GLOSSARY.md#platform-terms)** t
 
 When a customer opens their HR workspace:
 
-1. The system looks up their assigned [plan](./GLOSSARY.md#platform-terms) and loads its included [modules](./GLOSSARY.md#platform-terms).
+1. The system looks up their assigned [plan](./PLATFORM.md) and loads its included [modules](./PLATFORM.md).
 2. Any [per-customer overrides](#per-customer-module-overrides) are applied (force on, force off, or revert to plan default).
 3. The resulting module set controls sidebar visibility and feature access.
 4. Disabled modules are both **hidden and blocked** — users cannot reach them even with a direct link.
@@ -48,7 +48,7 @@ Social HR ships with three plan tiers. Platform staff can create additional plan
 
 **Not included in default trial:** Recruitment, onboarding, payroll, performance, offboarding, assets, helpdesk, projects, geofencing, biometric devices, activity tracking, documents.
 
-Trial is the **default plan** for newly [provisioned](./GLOSSARY.md#platform-terms) workspaces unless another plan is selected.
+Trial is the **default plan** for newly [provisioned](./PLATFORM.md) workspaces unless another plan is selected.
 
 **Who benefits:** Sales teams running quick evaluations; HR leaders testing core attendance and leave before committing.
 
@@ -91,7 +91,7 @@ Trial is the **default plan** for newly [provisioned](./GLOSSARY.md#platform-ter
 | [Geofencing](./MODULES.md#geofencing) | ✓ |
 | [Biometric Devices](./MODULES.md#biometric-devices) | ✓ |
 
-**Who benefits:** Organizations with office-based workforces needing [geofence](./GLOSSARY.md#workforce-visibility-terms) enforcement, or those using fingerprint/face hardware terminals.
+**Who benefits:** Organizations with office-based workforces needing [geofence](./FEATURES.md#geofencing-and-work-type-location-policies) enforcement, or those using fingerprint/face hardware terminals.
 
 **Typical workflow:** [Use Cases — Configure office geofencing](./USE_CASES.md#configure-office-geofencing).
 
@@ -199,4 +199,4 @@ Scenario: [Use Cases — Suspend a non-paying account](./USE_CASES.md#suspend-a-
 - [Policies — Account access](./POLICIES.md#account-access-and-entitlements) — entitlement enforcement rules
 - [Features](./FEATURES.md) — capability deep dives by module
 - [Use Cases](./USE_CASES.md) — plan change scenarios
-- [Glossary — Platform terms](./GLOSSARY.md#platform-terms) — plan, module, entitlement definitions
+- [Platform](./PLATFORM.md) — plan, module, and entitlement context

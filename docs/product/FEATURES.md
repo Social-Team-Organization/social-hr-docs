@@ -4,8 +4,6 @@ Detailed descriptions of Social HR's major capabilities — especially those tha
 
 Each feature section covers: **what it is**, **who uses it**, **typical workflow**, **benefits**, and **limitations**.
 
-For UI label definitions, see the [Glossary](./GLOSSARY.md).
-
 > **At a glance — Social HR differentiators**
 >
 > | Feature | [Plan](./PLANS.md) | Pay impact |
@@ -27,7 +25,7 @@ Module catalog: [Modules](./MODULES.md).
 
 ### What it is
 
-Each customer organization operates in a fully isolated [HR workspace](./GLOSSARY.md#platform-terms) with its own web address, user accounts, and data. No customer can access another customer's information.
+Each customer organization operates in a fully isolated [HR workspace](./PLATFORM.md) with its own web address, user accounts, and data. No customer can access another customer's information.
 
 ### Who uses it
 
@@ -35,7 +33,7 @@ All users — this is the foundational architecture, not an optional feature.
 
 ### Typical workflow
 
-1. [Platform operator](./ROLES_AND_PERMISSIONS.md#platform-operator) [provisions](./GLOSSARY.md#platform-terms) workspace with [subdomain](./GLOSSARY.md#platform-terms)
+1. [Platform operator](./ROLES_AND_PERMISSIONS.md#platform-operator) [provisions](./PLATFORM.md) workspace with [subdomain](./PLATFORM.md)
 2. Customer users log in at their unique address
 3. All data, files, and settings remain within that workspace
 4. Platform staff manage metadata from the [control plane](./PLATFORM.md) only
@@ -62,7 +60,7 @@ Policy: [Data isolation](./POLICIES.md#data-isolation-and-privacy). Rationale: [
 
 ### What it is
 
-The system for recording when employees start and stop work. [Attendance](./GLOSSARY.md#attendance-and-pay-terms) is the **authoritative source for pay hours** — all [payroll](./FEATURES.md#payroll) calculations derive from validated attendance records.
+The system for recording when employees start and stop work. [Attendance](./MODULES.md#attendance) is the **authoritative source for pay hours** — all [payroll](./FEATURES.md#payroll) calculations derive from validated attendance records.
 
 ### Who uses it
 
@@ -80,7 +78,7 @@ The system for recording when employees start and stop work. [Attendance](./GLOS
 3. Attendance row is created with timestamp
 4. Employee clicks **Check-Out** when finishing
 5. Managers review flagged records in the "Attendance To Validate" queue
-6. Validated records feed the [work records](./GLOSSARY.md#attendance-and-pay-terms) matrix used by payroll
+6. Validated records feed the [work records](./MODULES.md#attendance) matrix used by payroll
 
 Daily flow: [How It Works — Daily work flow](./HOW_IT_WORKS.md#daily-work-flow).
 
@@ -107,7 +105,7 @@ Module: [Attendance](./MODULES.md#attendance). Policy: [Attendance policies](./P
 
 ### What it is
 
-Location enforcement at clock-in based on where an employee is allowed to work, determined by their **[work type](./GLOSSARY.md#workforce-visibility-terms)** (Office, Remote, Hybrid, Field) and an optional office [geofence](./GLOSSARY.md#workforce-visibility-terms) circle.
+Location enforcement at clock-in based on where an employee is allowed to work, determined by their **[work type](./FEATURES.md#geofencing-and-work-type-location-policies)** (Office, Remote, Hybrid, Field) and an optional office [geofence](./FEATURES.md#geofencing-and-work-type-location-policies) circle.
 
 ### Who uses it
 
@@ -115,16 +113,16 @@ Location enforcement at clock-in based on where an employee is allowed to work, 
 |------|---------|
 | **HR administrators** | Configure office coordinates, radius, and work type policies |
 | **Employees** | Experience location checks at check-in |
-| **Managers** | Approve [work type requests](./GLOSSARY.md#workforce-visibility-terms) for temporary remote days |
+| **Managers** | Approve [work type requests](./FEATURES.md#geofencing-and-work-type-location-policies) for temporary remote days |
 
 ### Typical workflow
 
 1. HR admin sets office geofence (latitude, longitude, radius) and activates it
-2. Each work type has a [location policy](./GLOSSARY.md#workforce-visibility-terms):
+2. Each work type has a [location policy](./FEATURES.md#geofencing-and-work-type-location-policies):
    - **Require inside geofence** — must be within the office circle
    - **Allow anywhere** — no location restriction
    - **Block clock-in** — cannot clock in at all
-3. When employee checks in, the system determines their **[effective work type](./GLOSSARY.md#workforce-visibility-terms)** for that day (see [How It Works — Work type resolution](./HOW_IT_WORKS.md#work-type-resolution))
+3. When employee checks in, the system determines their **[effective work type](./FEATURES.md#geofencing-and-work-type-location-policies)** for that day (see [How It Works — Work type resolution](./HOW_IT_WORKS.md#work-type-resolution))
 4. Location policy is applied; check-in succeeds or fails with an explanation
 5. Every evaluation is logged for audit
 
@@ -143,7 +141,7 @@ HR admins can customize policies on any work type.
 
 - Flexible rules — not just "remote on/off"
 - Temporary overrides via work type requests (e.g., "work from home Friday")
-- Per-employee [bypass geofence](./GLOSSARY.md#workforce-visibility-terms) for executives or special cases
+- Per-employee [bypass geofence](./FEATURES.md#geofencing-and-work-type-location-policies) for executives or special cases
 - Full audit trail of location decisions
 
 ### Limitations
@@ -176,7 +174,7 @@ Optional webcam identity verification before attendance is recorded. Employees e
 ### Typical workflow
 
 1. HR admin enables Face Check-In in settings
-2. Employee completes [face registration](./GLOSSARY.md#workforce-visibility-terms) (minimum three successful captures)
+2. Employee completes [face registration](./FEATURES.md#geofencing-and-work-type-location-policies) (minimum three successful captures)
 3. At check-in, employee's webcam captures frames
 4. System compares against enrolled templates
 5. Match above threshold → standard check-in proceeds
@@ -213,23 +211,23 @@ The Social HR Desktop app monitors employee presence at their computer — keybo
 | Role | Actions |
 |------|---------|
 | **Employees** | Install and run the desktop app while working |
-| **Managers** | Review team activity, classify [review segments](./GLOSSARY.md#workforce-visibility-terms) |
+| **Managers** | Review team activity, classify [review segments](./FEATURES.md#geofencing-and-work-type-location-policies) |
 | **HR administrators** | Configure idle thresholds, screenshot settings, retention |
 
 ### Typical workflow
 
 1. Employee installs Social HR Desktop and logs in
-2. At check-in, the app begins sending periodic [heartbeats](./GLOSSARY.md#workforce-visibility-terms)
+2. At check-in, the app begins sending periodic [heartbeats](./FEATURES.md#geofencing-and-work-type-location-policies)
 3. System classifies time into segments:
    - **Active** — keyboard/mouse input detected
    - **Idle** — no input for configured threshold (default: 5 minutes)
    - **Review required** — idle exceeds review threshold (default: 15 minutes)
 4. Optional screenshots captured at intervals when enabled
 5. Manager sees review segments and decides: **Paid**, **Unpaid**, or **Meeting**
-6. [Productivity score](./GLOSSARY.md#workforce-visibility-terms) calculated for informational display
+6. [Productivity score](./FEATURES.md#geofencing-and-work-type-location-policies) calculated for informational display
 7. At check-out, activity session closes
 
-> **Pay authority:** Activity monitoring does **not** automatically change [attendance](./GLOSSARY.md#attendance-and-pay-terms) or payroll. Managers classify ambiguous idle time; [attendance remains the pay source](./DESIGN_DECISIONS.md#attendance-drives-pay-activity-provides-oversight).
+> **Pay authority:** Activity monitoring does **not** automatically change [attendance](./MODULES.md#attendance) or payroll. Managers classify ambiguous idle time; [attendance remains the pay source](./DESIGN_DECISIONS.md#attendance-drives-pay-activity-provides-oversight).
 
 ### Benefits
 
@@ -312,7 +310,7 @@ Compensation processing — employment contracts, payslip generation, allowances
 ### Typical workflow
 
 1. HR sets up employment contracts with salary structures
-2. [Attendance](./GLOSSARY.md#attendance-and-pay-terms) is validated for the pay period
+2. [Attendance](./MODULES.md#attendance) is validated for the pay period
 3. Payroll specialist generates payslips (manually or via scheduled job)
 4. System applies allowances, deductions, leave adjustments, and tax
 5. Employees access payslips on their profile Payroll tab
@@ -453,10 +451,6 @@ Social HR defaults to **Arabic** as the primary interface language, with English
 - Consistent Arabic terminology across the product (e.g. check-in → تسجيل الحضور, check-out → تسجيل الانصراف)
 - Core HR terms use established MENA HR wording
 
-### For training and localization
-
-Use the [Glossary](./GLOSSARY.md) for standard product terms and Arabic equivalents where listed.
-
 Rationale: [Design Decisions — Arabic as default](./DESIGN_DECISIONS.md#arabic-as-the-default-language).
 
 ---
@@ -498,4 +492,3 @@ Full list: [Policies — Explicit non-policies](./POLICIES.md#explicit-non-polic
 - [Use Cases](./USE_CASES.md) — scenarios by persona
 - [How It Works](./HOW_IT_WORKS.md) — end-to-end flows
 - [Design Decisions](./DESIGN_DECISIONS.md) — why features were built this way
-- [Glossary](./GLOSSARY.md) — key terms

@@ -22,7 +22,7 @@ Policies resulting from these decisions: [Policies](./POLICIES.md).
 
 **Context:** Traditional HR software often puts multiple companies in one shared database, relying on filters to keep data separate. Social HR sells dedicated workspaces accessed via unique web addresses.
 
-**Decision:** Each customer organization gets a fully isolated [workspace](./GLOSSARY.md#platform-terms). One customer, one web address, one self-contained environment.
+**Decision:** Each customer organization gets a fully isolated [workspace](./PLATFORM.md). One customer, one web address, one self-contained environment.
 
 ![Tenant isolation — each organization in its own secure space](./assets/tenant-isolation.png)
 
@@ -45,12 +45,12 @@ Policy: [Data isolation](./POLICIES.md#data-isolation-and-privacy). Overview: [M
 
 **Why it matters:**
 
-- Eliminates confusion between "[tenant](./GLOSSARY.md#platform-terms)" and "company" — one clear boundary.
+- Eliminates confusion between "[tenant](./PLATFORM.md)" and "company" — one clear boundary.
 - Simplifies permissions, reporting, and file storage.
-- Aligns with the SaaS model: each customer is one organization on one [subdomain](./GLOSSARY.md#platform-terms).
+- Aligns with the SaaS model: each customer is one organization on one [subdomain](./PLATFORM.md).
 - **Trade-off:** organizations with multiple legal entities under one HR department would use separate workspaces or manage entities through departments.
 
-Glossary: [Removed concepts — Company](./GLOSSARY.md#removed-concepts).
+See [Removed concepts — Company](./DESIGN_DECISIONS.md#no-company-switcher).
 
 ---
 
@@ -58,7 +58,7 @@ Glossary: [Removed concepts — Company](./GLOSSARY.md#removed-concepts).
 
 **Context:** Desktop monitoring products often blur "hours at computer" with "hours worked," creating payroll and legal ambiguity.
 
-**Decision:** [Attendance](./GLOSSARY.md#attendance-and-pay-terms) (check-in/out, validated work records) is the authoritative source for pay hours. [Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring) tracks desktop presence but does not automatically change payroll.
+**Decision:** [Attendance](./MODULES.md#attendance) (check-in/out, validated work records) is the authoritative source for pay hours. [Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring) tracks desktop presence but does not automatically change payroll.
 
 ![Attendance is pay authority; activity links for oversight only](./assets/attendance-pay-authority.png)
 
@@ -67,7 +67,7 @@ Glossary: [Removed concepts — Company](./GLOSSARY.md#removed-concepts).
 - Payroll specialists and legal teams have a clear, auditable pay source.
 - Activity adds manager visibility without replacing time clocks.
 - Managers actively classify ambiguous idle time (Paid / Unpaid / Meeting) rather than the system making pay decisions automatically.
-- [Productivity scores](./GLOSSARY.md#workforce-visibility-terms) are informational — they never appear on payslips.
+- [Productivity scores](./FEATURES.md#geofencing-and-work-type-location-policies) are informational — they never appear on payslips.
 - **Trade-off:** organizations wanting automatic pay deduction for idle time must handle that outside Social HR or through manual attendance adjustment.
 
 Policy: [Activity tracking — Idle pay](./POLICIES.md#activity-tracking). Flow: [How It Works — Attendance sources](./HOW_IT_WORKS.md#attendance-sources-and-pay-authority).
@@ -78,16 +78,16 @@ Policy: [Activity tracking — Idle pay](./POLICIES.md#activity-tracking). Flow:
 
 **Context:** Modern workforces need office, remote, hybrid, and field patterns — with temporary overrides for specific days.
 
-**Decision:** Location rules are tied to **[work types](./GLOSSARY.md#workforce-visibility-terms)** with three policy options (require geofence, allow anywhere, block clock-in), resolved per day through a priority chain.
+**Decision:** Location rules are tied to **[work types](./FEATURES.md#geofencing-and-work-type-location-policies)** with three policy options (require geofence, allow anywhere, block clock-in), resolved per day through a priority chain.
 
 ![Work type resolution — approved request, weekday override, rotating assignment, default](./assets/work-type-resolution.png)
 
 **Why it matters:**
 
 - HR configures once per work type; employees experience consistent rules.
-- Temporary remote days work via approved [work type requests](./GLOSSARY.md#workforce-visibility-terms) — no permanent profile changes.
+- Temporary remote days work via approved [work type requests](./FEATURES.md#geofencing-and-work-type-location-policies) — no permanent profile changes.
 - Weekday overrides support patterns like "Friday remote" without daily requests.
-- Per-employee [bypass geofence](./GLOSSARY.md#workforce-visibility-terms) handles executive travel and exceptions.
+- Per-employee [bypass geofence](./FEATURES.md#geofencing-and-work-type-location-policies) handles executive travel and exceptions.
 - **Trade-off:** HR must understand work type configuration. Misconfigured work types can block legitimate check-ins.
 
 Feature: [Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies). Scenario: [Hybrid employee](./USE_CASES.md#cross-persona-scenario-hybrid-employee).
@@ -98,7 +98,7 @@ Feature: [Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies).
 
 **Context:** SaaS products need sellable tiers and the ability to turn features on/off per customer without rebuilding their workspace.
 
-**Decision:** [Subscription plans](./PLANS.md) and [module](./GLOSSARY.md#platform-terms) assignments are managed in the [control plane](./PLATFORM.md), not inside each customer workspace. Changes take effect immediately.
+**Decision:** [Subscription plans](./PLANS.md) and [module](./PLATFORM.md) assignments are managed in the [control plane](./PLATFORM.md), not inside each customer workspace. Changes take effect immediately.
 
 ![Plan tiers determine which modules appear in the customer sidebar](./assets/plans-comparison.png)
 
@@ -116,7 +116,7 @@ Feature: [Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies).
 
 **Context:** Platform operators (Social HR staff) and customer users (HR, employees) have fundamentally different jobs.
 
-**Decision:** Two separate interfaces — [control plane](./GLOSSARY.md#platform-terms) for platform staff, HR workspace for customer users — on different web addresses with separate login.
+**Decision:** Two separate interfaces — [control plane](./PLATFORM.md) for platform staff, HR workspace for customer users — on different web addresses with separate login.
 
 ![Control plane vs tenant HR workspace — two surfaces, one product](./assets/control-plane-vs-tenant.png)
 
@@ -155,14 +155,14 @@ Policy: [Face check-in policies](./POLICIES.md#face-check-in).
 
 **Context:** Primary market users expect Arabic HR terminology and a first-run experience in their language.
 
-**Decision:** Arabic is the default interface language, with standardized HR terminology in the product [Glossary](./GLOSSARY.md).
+**Decision:** Arabic is the default interface language, with standardized HR terminology across the product.
 
 **Why it matters:**
 
 - First login feels native to Saudi/GCC HR teams.
 - Terminology is standardized (e.g., check-in → تسجيل الحضور) across the product.
 - English and other locales remain available via language switcher.
-- Training materials can reference the glossary for consistency.
+- Training materials can reference product documentation for consistency.
 - **Trade-off:** demo content and documentation should account for right-to-left layout where applicable.
 
 Feature: [Internationalization](./FEATURES.md#internationalization-arabic-first).
@@ -241,4 +241,3 @@ Full list: [Policies — Explicit non-policies](./POLICIES.md#explicit-non-polic
 - [Overview](./OVERVIEW.md) — product summary
 - [Platform](./PLATFORM.md) — control plane vs workspace split
 - [How It Works](./HOW_IT_WORKS.md) — flows shaped by these decisions
-- [Glossary](./GLOSSARY.md) — key terms

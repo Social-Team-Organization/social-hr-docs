@@ -4,7 +4,7 @@
 
 Social HR is a **multi-tenant human resources platform** built for organizations that want a complete HR workspace — hiring through payroll — with strong [data isolation](./POLICIES.md#data-isolation-and-privacy) per customer.
 
-Each customer organization gets its **own dedicated [tenant workspace](./GLOSSARY.md#platform-terms)** accessed through a unique web address ([subdomain](./GLOSSARY.md#platform-terms)). Employees, managers, and HR staff work inside that workspace. Social HR [platform operators](./GLOSSARY.md#platform-terms) manage customer accounts from a separate [control plane](./PLATFORM.md) operations dashboard.
+Each customer organization gets its **own dedicated [tenant workspace](./PLATFORM.md)** accessed through a unique web address ([subdomain](./PLATFORM.md)). Employees, managers, and HR staff work inside that workspace. Social HR [platform operators](./PLATFORM.md) manage customer accounts from a separate [control plane](./PLATFORM.md) operations dashboard.
 
 > **At a glance**
 >
@@ -13,7 +13,7 @@ Each customer organization gets its **own dedicated [tenant workspace](./GLOSSAR
 > | **Model** | One organization = one isolated workspace = one subdomain |
 > | **Scope** | Hire → onboard → manage → pay → develop → exit |
 > | **Differentiators** | [Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies), [face check-in](./FEATURES.md#face-check-in), [activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring), Arabic-first UI |
-> | **Pay authority** | [Attendance](./GLOSSARY.md#attendance-and-pay-terms) — not desktop activity hours |
+> | **Pay authority** | [Attendance](./MODULES.md#attendance) — not desktop activity hours |
 
 ---
 
@@ -32,7 +32,7 @@ Social HR covers the full employee lifecycle. See [How It Works — Hire to reti
 | **Support** | [Helpdesk](./MODULES.md#helpdesk), [Assets](./MODULES.md#assets), [Projects](./MODULES.md#projects) | Tickets, equipment, delivery tracking |
 | **Exit** | [Offboarding](./MODULES.md#offboarding) | Structured exit processes |
 
-[Plans](./PLANS.md) determine which [modules](./GLOSSARY.md#platform-terms) each customer can use. [Platform operators](./ROLES_AND_PERMISSIONS.md#platform-operator) can also enable or disable individual modules per customer via [module overrides](./GLOSSARY.md#platform-terms).
+[Plans](./PLANS.md) determine which [modules](./PLATFORM.md) each customer can use. [Platform operators](./ROLES_AND_PERMISSIONS.md#platform-operator) can also enable or disable individual modules per customer via [module overrides](./PLATFORM.md).
 
 ---
 
@@ -44,7 +44,7 @@ HR and operations leaders comparing HR platforms. Social HR's core story: **one 
 
 ### Platform operators
 
-Social HR staff who [provision](./GLOSSARY.md#platform-terms) customer workspaces, assign [subscription plans](./PLANS.md), monitor account status, and support the tenant lifecycle. Details: [Platform](./PLATFORM.md), [Use Cases — Platform operator](./USE_CASES.md#platform-operator-scenarios).
+Social HR staff who [provision](./PLATFORM.md) customer workspaces, assign [subscription plans](./PLANS.md), monitor account status, and support the tenant lifecycle. Details: [Platform](./PLATFORM.md), [Use Cases — Platform operator](./USE_CASES.md#platform-operator-scenarios).
 
 ### Tenant users (customer organizations)
 
@@ -68,7 +68,7 @@ Social HR staff who [provision](./GLOSSARY.md#platform-terms) customer workspace
 
 ### How this works for users
 
-1. **Each customer gets a [subdomain](./GLOSSARY.md#platform-terms)** — for example, `acme.socialhr.com` routes to Acme Corp's workspace.
+1. **Each customer gets a [subdomain](./PLATFORM.md)** — for example, `acme.socialhr.com` routes to Acme Corp's workspace.
 2. **Data never mixes** — each workspace is self-contained. There is no way for one customer to browse another's employees, payslips, or attendance. Policy details: [Data isolation](./POLICIES.md#data-isolation-and-privacy).
 3. **[Plans](./PLANS.md) control features** — subscription tiers determine which HR [modules](./MODULES.md) appear in the sidebar.
 4. **Platform staff operate separately** — provisioning, billing status, and plan changes happen in the [control plane](./PLATFORM.md), not inside customer HR workspaces.
@@ -81,14 +81,14 @@ Beyond standard HR modules, Social HR adds capabilities aimed at modern workforc
 
 | Capability | User benefit | Visual |
 |------------|--------------|--------|
-| **[Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies)** | Enforce location rules at clock-in based on [work type](./GLOSSARY.md#workforce-visibility-terms) | ![Geofencing](./assets/geofencing.png) |
+| **[Geofencing](./FEATURES.md#geofencing-and-work-type-location-policies)** | Enforce location rules at clock-in based on [work type](./FEATURES.md#geofencing-and-work-type-location-policies) | ![Geofencing](./assets/geofencing.png) |
 | **[Face check-in](./FEATURES.md#face-check-in)** | Optional webcam identity verification before attendance | ![Face check-in](./assets/face-checkin.png) |
 | **[Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring)** | Desktop app tracks presence, idle time, optional screenshots | ![Activity monitoring](./assets/activity-monitoring.png) |
-| **Work-type location policies** | Flexible rules — not just "remote on/off" — with temporary overrides via [work type requests](./GLOSSARY.md#workforce-visibility-terms) | [How It Works — Work type resolution](./HOW_IT_WORKS.md#work-type-resolution) |
+| **Work-type location policies** | Flexible rules — not just "remote on/off" — with temporary overrides via [work type requests](./FEATURES.md#geofencing-and-work-type-location-policies) | [How It Works — Work type resolution](./HOW_IT_WORKS.md#work-type-resolution) |
 | **Arabic-first interface** | Default Arabic UI with consistent Saudi/GCC HR terminology | [Features — Internationalization](./FEATURES.md#internationalization-arabic-first) |
 | **[Plan-based entitlements](./PLANS.md)** | Sell tiers; turn modules on or off per customer without re-provisioning | ![Plans comparison](./assets/plans-comparison.png) |
 
-> **Important:** [Attendance](./GLOSSARY.md#attendance-and-pay-terms) remains the **authoritative source for pay hours**. [Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring) provides oversight but does not automatically change payroll. See [Design Decisions — Attendance drives pay](./DESIGN_DECISIONS.md#attendance-drives-pay-activity-provides-oversight).
+> **Important:** [Attendance](./MODULES.md#attendance) remains the **authoritative source for pay hours**. [Activity monitoring](./FEATURES.md#activity-tracking-desktop-monitoring) provides oversight but does not automatically change payroll. See [Design Decisions — Attendance drives pay](./DESIGN_DECISIONS.md#attendance-drives-pay-activity-provides-oversight).
 
 ---
 
@@ -125,4 +125,3 @@ Visual design uses warm paper tones with deep teal text and an ember accent for 
 - [Features](./FEATURES.md) — detailed capability descriptions
 - [How It Works](./HOW_IT_WORKS.md) — lifecycle flows and module connections
 - [Modules](./MODULES.md) — module catalog
-- [Glossary](./GLOSSARY.md) — key terms

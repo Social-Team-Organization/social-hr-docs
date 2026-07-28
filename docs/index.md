@@ -35,7 +35,6 @@ Product documentation for **HR leaders, buyers, implementation consultants, and 
 | [How it works](product/HOW_IT_WORKS.md) | Hire-to-retire flows and module connections |
 | [Use cases](product/USE_CASES.md) | Real scenarios by persona |
 | [Policies](product/POLICIES.md) | Rules your organization experiences in the product |
-| [Glossary](product/GLOSSARY.md) | Business terms and Arabic UI labels |
 
 ---
 

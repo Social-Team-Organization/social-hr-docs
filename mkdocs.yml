@@ -15,7 +15,6 @@ theme:
   logo: assets/socialhr-logo.png
   favicon: assets/socialhr-logo.png
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
@@ -48,6 +47,20 @@ extra:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ar
+          name: العربية
+          build: true
+          theme:
+            language: ar
 
 markdown_extensions:
   - admonition
@@ -81,4 +94,3 @@ nav:
   - Policies: product/POLICIES.md
   - Design Decisions: product/DESIGN_DECISIONS.md
   - Roles & Permissions: product/ROLES_AND_PERMISSIONS.md
-  - Glossary: product/GLOSSARY.md
